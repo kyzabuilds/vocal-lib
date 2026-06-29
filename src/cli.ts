@@ -68,14 +68,15 @@ function addListenOptions(command: Command): Command {
     .option("-m, --model <path>", "Path to a whisper.cpp .bin or .gguf model.")
     .option("-b, --backend <backend>", "Backend preference: auto, cpu, vulkan, or hip.", "auto")
     .option("-c, --capture <id>", "Capture device ID for whisper-stream. Use -1 for the default device.")
-    .option("-l, --language <code>", "Spoken language code, or auto.", "en")
+    .option("-l, --language <code>", "Spoken language code, or auto. Defaults to en.")
     .option("-t, --threads <count>", "Number of CPU threads used by whisper.cpp.")
-    .option("--step <ms>", "Audio step size in milliseconds. Use 0 for whisper-stream VAD mode.", "1000")
-    .option("--length <ms>", "Audio window length in milliseconds. Ignored in VAD mode (--step 0).", "5000")
-    .option("--keep <ms>", "Audio from the previous step to keep in milliseconds.", "300")
+    .option("--low-latency", "Use a fast live-words preset for small models: --step 150 --length 1200 --keep 150 --beam-size 1 --max-tokens 16.")
+    .option("--step <ms>", "Audio step size in milliseconds. Use 0 for whisper-stream VAD mode. Defaults to 1000, or 150 with --low-latency.")
+    .option("--length <ms>", "Audio window length in milliseconds. Ignored in VAD mode (--step 0). Defaults to 5000, or 1200 with --low-latency.")
+    .option("--keep <ms>", "Audio from the previous step to keep in milliseconds. Defaults to 300, or 150 with --low-latency.")
     .option("--max-tokens <count>", "Maximum tokens per audio chunk.")
     .option("--audio-ctx <count>", "Audio context size, where 0 means all.")
-    .option("--beam-size <count>", "Beam size for beam search.", "6")
+    .option("--beam-size <count>", "Beam size for beam search. Defaults to 6, or 1 with --low-latency.")
     .option("--vad-threshold <value>", "Voice activity detection threshold for --step 0 mode.")
     .option("--freq-threshold <value>", "High-pass frequency cutoff.")
     .option("--translate", "Translate the source language to English.")
@@ -83,7 +84,9 @@ function addListenOptions(command: Command): Command {
     .option("--print-special", "Print special tokens.")
     .option("--keep-context", "Keep prompt context between audio chunks.")
     .option("--tinydiarize", "Enable tinydiarize for compatible models.")
-    .option("--save-audio", "Save recorded microphone audio beside whisper-stream.");
+    .option("--save-audio", "Save recorded microphone audio beside whisper-stream.")
+    .option("--polish", "Send committed transcript chunks to OpenRouter for optional text polishing.")
+    .option("--polish-model <slug>", "OpenRouter model slug for --polish. Defaults to VOCAL_OPENROUTER_MODEL or google/gemini-2.5-flash-lite.");
 }
 
 function readOptions<T>(value: Command | T): T {

@@ -5,6 +5,7 @@ import {
   resolveWhisperBinary,
   supportedModelExtensions,
 } from "../engine/whisper-process.js";
+import { defaultOpenRouterBaseUrl, defaultOpenRouterModel, readOpenRouterConfig } from "../llm/openrouter.js";
 import { isCommandAvailable, listLocalModelPaths } from "./utils.js";
 
 interface Check {
@@ -65,6 +66,24 @@ export async function doctorCommand(): Promise<void> {
     ok: localModels.length > 0,
     detail: localModels.length > 0 ? `${localModels.length} model file(s) found` : "none found",
     hint: `Place a ${supportedModelExtensions().join(", ")} model in ${appPaths.modelsDir}.`,
+  });
+
+  const openRouter = readOpenRouterConfig();
+  checks.push({
+    label: "OpenRouter API key",
+    ok: Boolean(openRouter.apiKey),
+    detail: openRouter.apiKey ? "configured via VOCAL_OPENROUTER_API_KEY" : "not configured",
+    hint: "Set VOCAL_OPENROUTER_API_KEY only if you want to use --polish.",
+  });
+  checks.push({
+    label: "OpenRouter base URL",
+    ok: true,
+    detail: openRouter.baseUrl === defaultOpenRouterBaseUrl ? `${openRouter.baseUrl} (default)` : openRouter.baseUrl,
+  });
+  checks.push({
+    label: "OpenRouter model",
+    ok: true,
+    detail: openRouter.model === defaultOpenRouterModel ? `${openRouter.model} (default)` : openRouter.model,
   });
 
   for (const tool of ["ffmpeg", "arecord", "rocminfo", "vulkaninfo"]) {
