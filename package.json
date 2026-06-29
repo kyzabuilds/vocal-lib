@@ -1,0 +1,26 @@
+{
+  "name": "vocal-cli",
+  "version": "0.1.0",
+  "description": "Local-first TypeScript CLI for whisper.cpp transcription.",
+  "type": "module",
+  "bin": {
+    "vocal": "./dist/cli.js"
+  },
+  "scripts": {
+    "dev": "tsx src/cli.ts",
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "commander": "^12.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  },
+  "packageManager": "pnpm@9.15.0"
+}

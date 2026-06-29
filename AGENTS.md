@@ -1,0 +1,1 @@
+Vocal is a local-first TypeScript CLI/service for fast speech transcription, intended to drive native `whisper.cpp` binaries for inference rather than using Python or cloud APIs; prioritize real-time local transcription, AMD Radeon RX 6700 XT support via Vulkan first with CPU fallback, and keep detailed implementation guidance in `.prompts/` instead of this file.

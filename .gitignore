@@ -1,0 +1,28 @@
+node_modules/
+dist/
+coverage/
+.turbo/
+.cache/
+*.tsbuildinfo
+.prompts/
+
+# Local models can be large and should be fetched explicitly.
+models/*
+!models/.gitkeep
+
+# Local whisper.cpp binaries and build artifacts.
+bin/*
+!bin/.gitkeep
+vendor/whisper.cpp/build/
+vendor/whisper.cpp/build-*/
+vendor/whisper.cpp/**/*.o
+vendor/whisper.cpp/**/*.a
+vendor/whisper.cpp/**/*.so
+vendor/whisper.cpp/**/*.dylib
+vendor/whisper.cpp/**/*.dll
+vendor/whisper.cpp/**/*.exe
+
+# Local logs and environment files.
+*.log
+.env
+.env.*
