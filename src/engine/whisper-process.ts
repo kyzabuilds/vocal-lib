@@ -118,6 +118,7 @@ export function getBinaryCandidates(kind: WhisperBinaryKind): BinaryCandidate[] 
   const vendorBinDirs = [
     join(appPaths.whisperCppDir, "build", "bin"),
     join(appPaths.whisperCppDir, "build", "src"),
+    join(appPaths.whisperCppDir, "build", "examples", kind === "cli" ? "cli" : "stream"),
     join(appPaths.whisperCppDir, "build", "examples", kind === "cli" ? "main" : "stream"),
     join(appPaths.whisperCppDir, "build", "bin", "Release"),
     join(appPaths.whisperCppDir, "build", "Release"),
@@ -189,24 +190,35 @@ export async function spawnWhisper(options: SpawnWhisperOptions): Promise<SpawnW
       stdio: options.mode === "stream" ? ["inherit", "pipe", "inherit"] : "inherit",
       cwd: dirname(options.binaryPath),
     });
+    const stopChild = (): void => {
+      if (!child.killed) {
+        child.kill("SIGINT");
+      }
+    };
+
+    if (options.signal?.aborted) {
+      stopChild();
+    } else {
+      options.signal?.addEventListener("abort", stopChild, { once: true });
+    }
 
     if (options.mode === "stream") {
       const stdout = child.stdout;
       const transcriptFilter = new TranscriptStreamFilter();
       let previewText = "";
       let flushTimer: NodeJS.Timeout | undefined;
-      const writeFinal = (event: { text: string }): void => {
+      const writeFinal = options.onTranscriptFinal ?? ((event: { text: string }): void => {
         process.stdout.write(`${previewText ? clearCurrentLine : ""}${event.text}\n`);
         previewText = "";
-      };
-      const writePreview = (event: { text: string }): void => {
+      });
+      const writePreview = options.onTranscriptPreview ?? ((event: { text: string }): void => {
         if (event.text === previewText) {
           return;
         }
 
         previewText = event.text;
         process.stdout.write(`${clearCurrentLine}${event.text}`);
-      };
+      });
       const flushPending = (): void => {
         flushTimer = undefined;
         const event = transcriptFilter.flush();
@@ -249,6 +261,7 @@ export async function spawnWhisper(options: SpawnWhisperOptions): Promise<SpawnW
 
     child.on("error", reject);
     child.on("close", (exitCode, signal) => {
+      options.signal?.removeEventListener("abort", stopChild);
       resolvePromise({ exitCode, signal });
     });
   });

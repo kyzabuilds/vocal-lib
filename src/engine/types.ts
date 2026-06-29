@@ -20,6 +20,9 @@ export interface SpawnWhisperOptions {
   backend: Backend;
   inputPath?: string;
   mode: WhisperBinaryKind;
+  onTranscriptFinal?: (event: TranscriptOutputEvent) => void;
+  onTranscriptPreview?: (event: TranscriptOutputEvent) => void;
+  signal?: AbortSignal;
   stream?: WhisperStreamOptions;
 }
 
@@ -46,4 +49,9 @@ export interface WhisperStreamOptions {
 export interface SpawnWhisperResult {
   exitCode: number | null;
   signal: NodeJS.Signals | null;
+}
+
+export interface TranscriptOutputEvent {
+  text: string;
+  raw: string;
 }
