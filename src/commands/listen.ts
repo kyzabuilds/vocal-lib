@@ -198,8 +198,10 @@ function attachEscapeHandler(onEscape: () => void): () => void {
     return () => undefined;
   }
 
+  const cleanupSignals: NodeJS.Signals[] = ["SIGINT", "SIGTERM", "SIGHUP"];
   const wasRaw = stdin.isRaw;
   const wasPaused = stdin.isPaused();
+  let disposed = false;
   const onData = (chunk: Buffer): void => {
     const value = chunk.toString("utf8");
     if (value === "\x1b") {
@@ -211,18 +213,35 @@ function attachEscapeHandler(onEscape: () => void): () => void {
       process.kill(process.pid, "SIGINT");
     }
   };
+  const cleanup = (): void => {
+    if (disposed) {
+      return;
+    }
 
-  stdin.setRawMode(true);
-  stdin.resume();
-  stdin.on("data", onData);
-
-  return () => {
+    disposed = true;
     stdin.off("data", onData);
     stdin.setRawMode(wasRaw);
     if (wasPaused) {
       stdin.pause();
     }
+
+    for (const signal of cleanupSignals) {
+      process.off(signal, onSignal);
+    }
   };
+  const onSignal = (signal: NodeJS.Signals): void => {
+    cleanup();
+    process.kill(process.pid, signal);
+  };
+
+  stdin.setRawMode(true);
+  stdin.resume();
+  stdin.on("data", onData);
+  for (const signal of cleanupSignals) {
+    process.on(signal, onSignal);
+  }
+
+  return cleanup;
 }
 
 function buildPolishInput(chunks: string[], previewText: string): string {
