@@ -6,7 +6,16 @@ export interface TranscriptPolisherOptions {
   maxInputChars?: number;
   onPolished: (event: PolishedTranscriptEvent) => void;
   onWarning?: (message: string) => void;
+  provider?: TranscriptPolisherProvider;
   timeoutMs?: number;
+}
+
+export interface TranscriptPolisherProvider {
+  polish(request: {
+    input: string;
+    priorContext?: string;
+    signal?: AbortSignal;
+  }): Promise<string>;
 }
 
 export interface PolishedTranscriptEvent {
@@ -15,10 +24,34 @@ export interface PolishedTranscriptEvent {
   sequence: number;
 }
 
-export class TranscriptPolisher {
+export class OpenRouterTranscriptPolisherProvider implements TranscriptPolisherProvider {
   private readonly client: OpenRouterClient;
+
+  constructor(
+    private readonly config: OpenRouterConfig,
+    private readonly timeoutMs = defaultOpenRouterTimeoutMs,
+  ) {
+    this.client = new OpenRouterClient(config);
+  }
+
+  async polish(request: { input: string; priorContext?: string; signal?: AbortSignal }): Promise<string> {
+    if (!this.config.apiKey) {
+      throw new Error("VOCAL_OPENROUTER_API_KEY is not configured.");
+    }
+
+    return this.client.polishText({
+      input: request.input,
+      priorContext: request.priorContext,
+      signal: request.signal,
+      timeoutMs: this.timeoutMs,
+    });
+  }
+}
+
+export class TranscriptPolisher {
   private readonly maxContextChars: number;
   private readonly maxInputChars: number;
+  private readonly provider: TranscriptPolisherProvider;
   private readonly timeoutMs: number;
   private controller: AbortController | undefined;
   private context = "";
@@ -26,10 +59,10 @@ export class TranscriptPolisher {
   private warned = false;
 
   constructor(private readonly options: TranscriptPolisherOptions) {
-    this.client = new OpenRouterClient(options.config);
     this.maxContextChars = options.maxContextChars ?? 1_200;
     this.maxInputChars = options.maxInputChars ?? 2_000;
     this.timeoutMs = options.timeoutMs ?? defaultOpenRouterTimeoutMs;
+    this.provider = options.provider ?? new OpenRouterTranscriptPolisherProvider(options.config, this.timeoutMs);
   }
 
   async polish(rawText: string): Promise<void> {
@@ -51,11 +84,10 @@ export class TranscriptPolisher {
     const sequence = ++this.sequence;
 
     try {
-      const text = await this.client.polishText({
+      const text = await this.provider.polish({
         input: keepHead(input, this.maxInputChars),
         priorContext: contextBeforeCurrent(this.context, input, this.maxContextChars),
         signal: controller.signal,
-        timeoutMs: this.timeoutMs,
       });
 
       if (controller.signal.aborted || sequence !== this.sequence) {

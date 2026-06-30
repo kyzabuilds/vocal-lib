@@ -10,6 +10,10 @@ import type {
   BinaryResolution,
   SpawnWhisperOptions,
   SpawnWhisperResult,
+  WhisperBinaryCapabilities,
+  WhisperDecoderPrompt,
+  WhisperDecoderPromptInput,
+  WhisperPathConfig,
   WhisperBinaryKind,
 } from "./types.js";
 
@@ -33,7 +37,7 @@ const backendArgs: Record<Backend, string[]> = {
 };
 
 const streamFlushDelayMs = 1200;
-const clearCurrentLine = "\x1b[2K\r";
+const binaryCapabilityCache = new Map<string, Promise<WhisperBinaryCapabilities>>();
 
 export function parseBackend(value: string): Backend {
   if (value === "auto" || value === "cpu" || value === "vulkan" || value === "hip") {
@@ -95,11 +99,19 @@ export function candidateLabel(candidate: BinaryCandidate): string {
   return `${candidate.path} (${candidate.source})`;
 }
 
-export function getBinaryCandidates(kind: WhisperBinaryKind): BinaryCandidate[] {
+export function getBinaryCandidates(kind: WhisperBinaryKind, paths: WhisperPathConfig = {}): BinaryCandidate[] {
   const envVar = envVars[kind];
   const envValue = process.env[envVar];
   const names = binaryNames[kind];
   const candidates: BinaryCandidate[] = [];
+  const explicitPath = kind === "cli" ? paths.whisperCliPath : paths.whisperStreamPath;
+
+  if (explicitPath && explicitPath.trim().length > 0) {
+    candidates.push({
+      path: resolveUserPath(explicitPath.trim()),
+      source: "configuration",
+    });
+  }
 
   if (envValue && envValue.trim().length > 0) {
     candidates.push({
@@ -110,18 +122,19 @@ export function getBinaryCandidates(kind: WhisperBinaryKind): BinaryCandidate[] 
 
   for (const name of names) {
     candidates.push({
-      path: join(appPaths.binDir, withPlatformExtension(name)),
+      path: join(paths.binDir ?? appPaths.binDir, withPlatformExtension(name)),
       source: "local-bin",
     });
   }
 
+  const whisperCppDir = paths.whisperCppDir ?? appPaths.whisperCppDir;
   const vendorBinDirs = [
-    join(appPaths.whisperCppDir, "build", "bin"),
-    join(appPaths.whisperCppDir, "build", "src"),
-    join(appPaths.whisperCppDir, "build", "examples", kind === "cli" ? "cli" : "stream"),
-    join(appPaths.whisperCppDir, "build", "examples", kind === "cli" ? "main" : "stream"),
-    join(appPaths.whisperCppDir, "build", "bin", "Release"),
-    join(appPaths.whisperCppDir, "build", "Release"),
+    join(whisperCppDir, "build", "bin"),
+    join(whisperCppDir, "build", "src"),
+    join(whisperCppDir, "build", "examples", kind === "cli" ? "cli" : "stream"),
+    join(whisperCppDir, "build", "examples", kind === "cli" ? "main" : "stream"),
+    join(whisperCppDir, "build", "bin", "Release"),
+    join(whisperCppDir, "build", "Release"),
   ];
 
   for (const binDir of vendorBinDirs) {
@@ -138,16 +151,31 @@ export function getBinaryCandidates(kind: WhisperBinaryKind): BinaryCandidate[] 
 
 export async function resolveWhisperBinary(kind: WhisperBinaryKind): Promise<BinaryResolution> {
   const checked = getBinaryCandidates(kind);
+  return resolveWhisperBinaryFromCandidates(kind, checked);
+}
+
+export async function resolveConfiguredWhisperBinary(
+  kind: WhisperBinaryKind,
+  paths: WhisperPathConfig = {},
+): Promise<BinaryResolution> {
+  const checked = getBinaryCandidates(kind, paths);
+  return resolveWhisperBinaryFromCandidates(kind, checked);
+}
+
+async function resolveWhisperBinaryFromCandidates(
+  kind: WhisperBinaryKind,
+  checked: BinaryCandidate[],
+): Promise<BinaryResolution> {
   for (const candidate of checked) {
     if (await isExecutableFile(candidate.path)) {
       return {
         kind,
         found: candidate,
-        checked,
-        envVar: envVars[kind],
-      };
-    }
+      checked,
+      envVar: envVars[kind],
+    };
   }
+}
 
   return {
     kind,
@@ -155,6 +183,21 @@ export async function resolveWhisperBinary(kind: WhisperBinaryKind): Promise<Bin
     checked,
     envVar: envVars[kind],
   };
+}
+
+export async function detectWhisperBinaryCapabilities(binaryPath: string): Promise<WhisperBinaryCapabilities> {
+  const cached = binaryCapabilityCache.get(binaryPath);
+  if (cached) {
+    return cached;
+  }
+
+  const probe = readWhisperHelp(binaryPath).then((help) => ({
+    carryInitialPrompt: hasHelpFlag(help, "--carry-initial-prompt"),
+    prompt: hasHelpFlag(help, "--prompt"),
+  }));
+
+  binaryCapabilityCache.set(binaryPath, probe);
+  return probe;
 }
 
 export async function validateInputPath(inputPath: string): Promise<string> {
@@ -182,12 +225,39 @@ export async function validateModelPath(modelPath: string): Promise<string> {
   return resolved;
 }
 
+async function readWhisperHelp(binaryPath: string): Promise<string> {
+  return await new Promise<string>((resolvePromise, reject) => {
+    const child = spawn(binaryPath, ["--help"], {
+      stdio: ["ignore", "pipe", "pipe"],
+      cwd: dirname(binaryPath),
+    });
+    let output = "";
+
+    child.stdout?.setEncoding("utf8");
+    child.stdout?.on("data", (chunk: string) => {
+      output += chunk;
+    });
+
+    child.stderr?.setEncoding("utf8");
+    child.stderr?.on("data", (chunk: string) => {
+      output += chunk;
+    });
+
+    child.on("error", reject);
+    child.on("close", () => resolvePromise(output));
+  });
+}
+
+function hasHelpFlag(help: string, flag: string): boolean {
+  return new RegExp(`(^|\\s)${escapeRegExp(flag)}(\\s|,|$)`).test(help);
+}
+
 export async function spawnWhisper(options: SpawnWhisperOptions): Promise<SpawnWhisperResult> {
   const args = buildWhisperArgs(options);
 
   return await new Promise<SpawnWhisperResult>((resolvePromise, reject) => {
     const child = spawn(options.binaryPath, args, {
-      stdio: options.mode === "stream" ? ["inherit", "pipe", "inherit"] : "inherit",
+      stdio: ["ignore", "pipe", "pipe"],
       cwd: dirname(options.binaryPath),
     });
     const stopChild = (): void => {
@@ -205,20 +275,9 @@ export async function spawnWhisper(options: SpawnWhisperOptions): Promise<SpawnW
     if (options.mode === "stream") {
       const stdout = child.stdout;
       const transcriptFilter = new TranscriptStreamFilter();
-      let previewText = "";
       let flushTimer: NodeJS.Timeout | undefined;
-      const writeFinal = options.onTranscriptFinal ?? ((event: { text: string }): void => {
-        process.stdout.write(`${previewText ? clearCurrentLine : ""}${event.text}\n`);
-        previewText = "";
-      });
-      const writePreview = options.onTranscriptPreview ?? ((event: { text: string }): void => {
-        if (event.text === previewText) {
-          return;
-        }
-
-        previewText = event.text;
-        process.stdout.write(`${clearCurrentLine}${event.text}`);
-      });
+      const writeFinal = options.onTranscriptFinal ?? (() => undefined);
+      const writePreview = options.onTranscriptPreview ?? (() => undefined);
       const flushPending = (): void => {
         flushTimer = undefined;
         const event = transcriptFilter.flush();
@@ -238,6 +297,7 @@ export async function spawnWhisper(options: SpawnWhisperOptions): Promise<SpawnW
 
       stdout?.setEncoding("utf8");
       stdout?.on("data", (chunk: string) => {
+        options.onStdout?.(chunk);
         const update = transcriptFilter.write(chunk);
         for (const final of update.finals) {
           writeFinal(final);
@@ -257,12 +317,27 @@ export async function spawnWhisper(options: SpawnWhisperOptions): Promise<SpawnW
 
         flushPending();
       });
+    } else {
+      child.stdout?.setEncoding("utf8");
+      child.stdout?.on("data", (chunk: string) => {
+        options.onStdout?.(chunk);
+      });
     }
 
-    child.on("error", reject);
+    child.stderr?.setEncoding("utf8");
+    child.stderr?.on("data", (chunk: string) => {
+      options.onStderr?.(chunk);
+    });
+
+    child.on("error", (error) => {
+      options.onError?.(error);
+      reject(error);
+    });
     child.on("close", (exitCode, signal) => {
       options.signal?.removeEventListener("abort", stopChild);
-      resolvePromise({ exitCode, signal });
+      const result = { exitCode, signal };
+      options.onProcessExit?.(result);
+      resolvePromise(result);
     });
   });
 }
@@ -276,6 +351,7 @@ function buildWhisperArgs(options: SpawnWhisperOptions): string[] {
     }
 
     args.push("-f", options.inputPath);
+    pushInitialPromptArgs(args, options.initialPrompt, options.carryInitialPrompt);
   } else {
     appendStreamArgs(args, options.stream);
   }
@@ -322,12 +398,67 @@ function appendStreamArgs(args: string[], stream = {} as NonNullable<SpawnWhispe
   if (stream.saveAudio) {
     args.push("--save-audio");
   }
+
+  pushInitialPromptArgs(args, stream.initialPrompt, stream.carryInitialPrompt);
+}
+
+function pushInitialPromptArgs(
+  args: string[],
+  initialPrompt: WhisperDecoderPromptInput | undefined,
+  carryInitialPrompt: boolean | undefined,
+): void {
+  const prompt = formatDecoderPrompt(initialPrompt);
+  if (prompt) {
+    args.push("--prompt", prompt);
+  }
+
+  if (carryInitialPrompt) {
+    args.push("--carry-initial-prompt");
+  }
+}
+
+export function formatDecoderPrompt(prompt: WhisperDecoderPromptInput | undefined): string | undefined {
+  if (typeof prompt === "string") {
+    return cleanPromptPart(prompt);
+  }
+
+  if (!prompt) {
+    return undefined;
+  }
+
+  const parts = [
+    cleanPromptPart(prompt.text),
+    listPromptPart("Common vocabulary", prompt.vocabulary),
+    listPromptPart("Common phrases", prompt.phrases),
+    listPromptPart("Expected punctuation", prompt.punctuation),
+    listPromptPart("Formatting", prompt.formatting),
+  ].filter((part): part is string => Boolean(part));
+
+  return parts.length > 0 ? parts.join("\n") : undefined;
+}
+
+function listPromptPart(label: string, values: WhisperDecoderPrompt[keyof WhisperDecoderPrompt]): string | undefined {
+  if (!Array.isArray(values)) {
+    return undefined;
+  }
+
+  const cleaned = values.map(cleanPromptPart).filter((value): value is string => Boolean(value));
+  return cleaned.length > 0 ? `${label}: ${cleaned.join(", ")}` : undefined;
+}
+
+function cleanPromptPart(value: string | undefined): string | undefined {
+  const cleaned = value?.replace(/\s+/g, " ").trim();
+  return cleaned && cleaned.length > 0 ? cleaned : undefined;
 }
 
 function pushNumberArg(args: string[], flag: string, value: number | undefined): void {
   if (value !== undefined) {
     args.push(flag, String(value));
   }
+}
+
+function escapeRegExp(value: string): string {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
 function withPlatformExtension(name: string): string {
