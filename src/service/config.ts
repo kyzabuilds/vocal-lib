@@ -22,6 +22,7 @@ export interface VocalServiceConfigInput {
     modelsDir?: string;
     rootDir?: string;
     runtimeDir?: string;
+    vadModelPath?: string;
     whisperCliPath?: string;
     whisperCppDir?: string;
     whisperStreamPath?: string;
@@ -33,8 +34,9 @@ export interface ResolvedVocalConfig {
   defaultModelPath?: string;
   mock: boolean;
   openRouter: OpenRouterConfig;
-  paths: Required<Omit<NonNullable<VocalServiceConfigInput["paths"]>, "defaultModelPath" | "whisperCliPath" | "whisperStreamPath">> & {
+  paths: Required<Omit<NonNullable<VocalServiceConfigInput["paths"]>, "defaultModelPath" | "vadModelPath" | "whisperCliPath" | "whisperStreamPath">> & {
     defaultModelPath?: string;
+    vadModelPath?: string;
     whisperCliPath?: string;
     whisperStreamPath?: string;
   };
@@ -65,6 +67,9 @@ export function resolveVocalConfig(input: VocalServiceConfigInput = {}, env: Nod
       binDir: resolvePath(input.paths?.binDir ?? cleanOptional(env.VOCAL_BIN_DIR) ?? join(rootDir, "bin")),
       modelsDir: resolvePath(input.paths?.modelsDir ?? cleanOptional(env.VOCAL_MODELS_DIR) ?? join(rootDir, "models")),
       runtimeDir,
+      vadModelPath: resolveOptionalPath(
+        input.paths?.vadModelPath ?? cleanOptional(env.VOCAL_VAD_MODEL) ?? join(rootDir, "vendor", "whisper.cpp", "models", "for-tests-silero-v6.2.0-ggml.bin"),
+      ),
       whisperCliPath: resolveOptionalPath(input.paths?.whisperCliPath ?? cleanOptional(env.VOCAL_WHISPER_CLI)),
       whisperCppDir: resolvePath(
         input.paths?.whisperCppDir ?? cleanOptional(env.VOCAL_WHISPER_CPP_DIR) ?? join(rootDir, "vendor", "whisper.cpp"),

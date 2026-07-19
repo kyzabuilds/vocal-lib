@@ -83,37 +83,49 @@ export interface VocalClientListenOptions {
   capture?: number | string;
   fallback?: boolean;
   freqThreshold?: number;
+  hallucinationGuardPhrases?: string[];
   initialPrompt?: LiveTranscriptionOptions["initialPrompt"];
   keep?: number;
   keepContext?: boolean;
   language?: string;
   length?: number;
+  logprobThreshold?: number;
   lowLatency?: boolean;
+  maxDecodeSilenceMs?: number;
   maxTokens?: number;
+  minSpeechMs?: number;
   metadata?: LiveTranscriptionOptions["metadata"];
   model?: string;
   modelPath?: string;
   noFallback?: boolean;
+  noSpeechThreshold?: number;
   polish?: boolean | LiveTranscriptionOptions["polish"];
   polishModel?: string;
   prompt?: LiveTranscriptionOptions["prompt"];
   printSpecial?: boolean;
   saveAudio?: boolean;
+  silenceHangoverMs?: number;
+  diagnostics?: boolean;
   sessionId?: string;
   step?: number;
   threads?: number;
   tinydiarize?: boolean;
   translate?: boolean;
   vadThreshold?: number;
+  vadModelPath?: string;
 }
 
 export interface VocalClientTranscribeOptions extends Omit<
   VocalClientListenOptions,
   "autostopOnDisconnect" | "capture" | "keep" | "length" | "lowLatency" | "saveAudio" | "sessionId" | "step"
 > {
+  entropyThreshold?: number;
   file?: string;
   filePath?: string;
+  logprobThreshold?: number;
+  noSpeechThreshold?: number;
   sessionId?: string;
+  suppressNonSpeechTokens?: boolean;
 }
 
 export interface VocalClientTranscriptStream extends AsyncIterable<VocalClientTranscriptEvent> {

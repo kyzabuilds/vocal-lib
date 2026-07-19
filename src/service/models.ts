@@ -26,7 +26,7 @@ export interface ListModelsOptions {
 
 export async function listModels(config: ResolvedVocalConfig, options: ListModelsOptions = {}): Promise<ModelListResult> {
   const local = await listLocalModels(config);
-  const selectedModelPath = options.selectedModelPath ?? config.defaultModelPath ?? (await mostAccurateModel(local));
+  const selectedModelPath = options.selectedModelPath ?? config.defaultModelPath ?? preferredModel(local);
 
   return {
     defaultModelPath: config.defaultModelPath,
@@ -39,7 +39,7 @@ export async function listModels(config: ResolvedVocalConfig, options: ListModel
 }
 
 export async function resolveModelPath(config: ResolvedVocalConfig, requested?: string): Promise<string> {
-  const modelPath = requested ?? config.defaultModelPath ?? (await mostAccurateModel(await listLocalModels(config)));
+  const modelPath = requested ?? config.defaultModelPath ?? preferredModel(await listLocalModels(config));
   if (!modelPath) {
     throw new Error(
       `No model specified and no local default model found. Pass modelPath or add a ${supportedModelExtensions().join("/")} file to ${config.paths.modelsDir}.`,
@@ -64,9 +64,14 @@ async function listLocalModels(config: ResolvedVocalConfig): Promise<ModelInfo[]
   ).then((models) => models.sort((a, b) => a.path.localeCompare(b.path)));
 }
 
-async function mostAccurateModel(models: ModelInfo[]): Promise<string | undefined> {
+function preferredModel(models: ModelInfo[]): string | undefined {
   if (models.length === 0) {
     return undefined;
+  }
+
+  const turboLargeV3 = models.find((model) => /(?:^|[-_])large-v3-turbo\.(?:bin|gguf)$/i.test(model.name));
+  if (turboLargeV3) {
+    return turboLargeV3.path;
   }
 
   return [...models].sort((a, b) => (b.sizeBytes ?? 0) - (a.sizeBytes ?? 0))[0].path;

@@ -245,26 +245,36 @@ function normalizeLiveOptions(payload: Record<string, unknown>): LiveTranscripti
     carryInitialPrompt: booleanValue(payload.carryInitialPrompt),
     capture: numberValue(payload.capture),
     freqThreshold: numberValue(payload.freqThreshold),
+    hallucinationGuardPhrases: Array.isArray(payload.hallucinationGuardPhrases)
+      ? (stringArrayValue(payload.hallucinationGuardPhrases) ?? [])
+      : undefined,
     initialPrompt: promptValue(payload.initialPrompt ?? payload.prompt),
     keep: numberValue(payload.keep),
     keepContext: booleanValue(payload.keepContext),
     language: stringValue(payload.language),
     length: numberValue(payload.length),
+    logprobThreshold: numberValue(payload.logprobThreshold),
     lowLatency: booleanValue(payload.lowLatency),
+    maxDecodeSilenceMs: numberValue(payload.maxDecodeSilenceMs),
     maxTokens: numberValue(payload.maxTokens),
+    minSpeechMs: numberValue(payload.minSpeechMs),
     metadata: objectValue(payload.metadata),
     modelPath: stringValue(payload.modelPath ?? payload.model),
     noFallback: payload.noFallback === undefined ? payload.fallback === false : booleanValue(payload.noFallback),
+    noSpeechThreshold: numberValue(payload.noSpeechThreshold),
     polish: polishValue(payload),
     prompt: promptValue(payload.prompt),
     printSpecial: booleanValue(payload.printSpecial),
     saveAudio: booleanValue(payload.saveAudio),
+    silenceHangoverMs: numberValue(payload.silenceHangoverMs),
+    diagnostics: booleanValue(payload.diagnostics),
     sessionId: stringValue(payload.sessionId),
     step: numberValue(payload.step),
     threads: numberValue(payload.threads),
     tinydiarize: booleanValue(payload.tinydiarize),
     translate: booleanValue(payload.translate),
     vadThreshold: numberValue(payload.vadThreshold),
+    vadModelPath: stringValue(payload.vadModelPath),
   };
 }
 
@@ -276,7 +286,11 @@ function normalizeFileOptions(payload: Record<string, unknown>): FileTranscripti
 
   return {
     ...normalizeLiveOptions(payload),
+    entropyThreshold: numberValue(payload.entropyThreshold),
     filePath,
+    logprobThreshold: numberValue(payload.logprobThreshold),
+    noSpeechThreshold: numberValue(payload.noSpeechThreshold),
+    suppressNonSpeechTokens: booleanValue(payload.suppressNonSpeechTokens),
   };
 }
 

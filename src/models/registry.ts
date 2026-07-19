@@ -42,4 +42,11 @@ export const recommendedModels: RecommendedModel[] = [
     fileNames: ["ggml-medium.bin", "ggml-medium.gguf"],
     notes: "Higher accuracy with a larger CPU/GPU footprint.",
   },
+  {
+    name: "large-v3-turbo",
+    size: "large",
+    language: "multilingual",
+    fileNames: ["ggml-large-v3-turbo.bin", "ggml-large-v3-turbo.gguf"],
+    notes: "Preferred local default for responsive, high-accuracy live transcription.",
+  },
 ];

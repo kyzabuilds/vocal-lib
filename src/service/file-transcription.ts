@@ -38,16 +38,21 @@ export async function transcribeFile(
     backend: options.backend ?? config.defaultBackend,
     binaryPath: binary.found.path,
     carryInitialPrompt: options.carryInitialPrompt,
+    entropyThreshold: options.entropyThreshold,
     initialPrompt: options.initialPrompt ?? options.prompt,
     inputPath,
+    logprobThreshold: options.logprobThreshold,
     mode: "cli",
     modelPath,
+    noFallback: options.noFallback ?? true,
+    noSpeechThreshold: options.noSpeechThreshold,
     onStderr: (chunk) => {
       stderr += chunk;
     },
     onStdout: (chunk) => {
       stdout += chunk;
     },
+    suppressNonSpeechTokens: options.suppressNonSpeechTokens ?? true,
   });
 
   return polishResult(config, options, {

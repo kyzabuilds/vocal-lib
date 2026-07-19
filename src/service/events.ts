@@ -60,17 +60,33 @@ export interface LiveTranscriptionOptions {
   carryInitialPrompt?: boolean;
   capture?: number;
   freqThreshold?: number;
+  /**
+   * Exact phrases that require speech-positive agreement before finalization
+   * when VAD has entered trailing silence. Default: ["thank you"]. Pass [] to disable.
+   */
+  hallucinationGuardPhrases?: string[];
   initialPrompt?: WhisperDecoderPromptInput;
   keep?: number;
   keepContext?: boolean;
   prompt?: WhisperDecoderPromptInput;
   language?: string;
   length?: number;
+  /** Average token log-probability paired with noSpeechThreshold. Default: -1.0. */
+  logprobThreshold?: number;
+  /**
+   * Use whisper-stream's short sliding windows so interim words are emitted
+   * while the speaker is still talking instead of waiting for a VAD boundary.
+   */
   lowLatency?: boolean;
   maxTokens?: number;
+  /** Decode at most this much trailing silence for right context. Default: 150 ms. */
+  maxDecodeSilenceMs?: number;
+  /** Consecutive VAD-positive audio required before decoding. Default: 300 ms. */
+  minSpeechMs?: number;
   metadata?: JsonObject;
   modelPath?: string;
   noFallback?: boolean;
+  noSpeechThreshold?: number;
   polish?: {
     enabled?: boolean;
     mode?: "manual" | "live";
@@ -78,12 +94,18 @@ export interface LiveTranscriptionOptions {
   };
   printSpecial?: boolean;
   saveAudio?: boolean;
+  /** VAD-negative audio required to reset an utterance. Default: 450 ms. */
+  silenceHangoverMs?: number;
+  /** Emit structured VAD/confidence timing records on the native driver's stderr. */
+  diagnostics?: boolean;
   sessionId?: string;
   step?: number;
   threads?: number;
   tinydiarize?: boolean;
   translate?: boolean;
   vadThreshold?: number;
+  /** Path to the Silero VAD model used by the project-owned vocal-stream driver. */
+  vadModelPath?: string;
 }
 
 export interface FileTranscriptionOptions {
@@ -91,21 +113,25 @@ export interface FileTranscriptionOptions {
   backend?: Backend;
   beamSize?: number;
   carryInitialPrompt?: boolean;
+  entropyThreshold?: number;
   filePath: string;
   freqThreshold?: number;
   initialPrompt?: WhisperDecoderPromptInput;
   keepContext?: boolean;
   prompt?: WhisperDecoderPromptInput;
   language?: string;
+  logprobThreshold?: number;
   maxTokens?: number;
   metadata?: JsonObject;
   modelPath?: string;
   noFallback?: boolean;
+  noSpeechThreshold?: number;
   polish?: {
     enabled?: boolean;
     model?: string;
   };
   printSpecial?: boolean;
+  suppressNonSpeechTokens?: boolean;
   threads?: number;
   tinydiarize?: boolean;
   translate?: boolean;
@@ -131,6 +157,7 @@ export function toWhisperStreamOptions(options: LiveTranscriptionOptions | FileT
     beamSize: options.beamSize,
     carryInitialPrompt: options.carryInitialPrompt,
     freqThreshold: options.freqThreshold,
+    hallucinationGuardPhrases: "hallucinationGuardPhrases" in options ? options.hallucinationGuardPhrases : undefined,
     initialPrompt: options.initialPrompt ?? options.prompt,
     keepContext: options.keepContext,
     language: options.language,

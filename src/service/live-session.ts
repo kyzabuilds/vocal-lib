@@ -46,23 +46,33 @@ interface StreamPreset {
   language: string;
   length: number;
   maxTokens?: number;
+  noFallback: boolean;
   step: number;
 }
 
+// step 0 selects whisper-stream's VAD mode: decoding only triggers when speech
+// energy drops (vad_simple), so silence/no-speech windows are never decoded and
+// cannot hallucinate captions like "Thank you.". length doubles as the audio
+// lookback buffer in this mode, so keep it generous.
 const defaultStreamPreset: StreamPreset = {
   beamSize: 6,
   keep: 300,
   language: "en",
-  length: 5000,
-  step: 1000,
+  length: 10000,
+  noFallback: true,
+  step: 0,
 };
 
+// Small sliding windows prioritize time-to-first-word. whisper-stream redraws
+// its current hypothesis continuously; consumers receive that as preview events
+// and can show it before a sentence is complete.
 const lowLatencyStreamPreset: StreamPreset = {
   beamSize: 1,
   keep: 150,
   language: "en",
   length: 1200,
   maxTokens: 16,
+  noFallback: true,
   step: 150,
 };
 
@@ -226,38 +236,65 @@ export class LiveSession extends EventEmitter {
   }
 
   private buildStreamOptions(): WhisperStreamOptions {
-    const preset = this.options.lowLatency ? lowLatencyStreamPreset : defaultStreamPreset;
+    const preset = (this.options.lowLatency ?? true) ? lowLatencyStreamPreset : defaultStreamPreset;
     return {
       audioContext: this.options.audioContext,
       beamSize: this.options.beamSize ?? preset.beamSize,
       capture: this.options.capture,
       freqThreshold: this.options.freqThreshold,
+      hallucinationGuardPhrases: this.options.hallucinationGuardPhrases,
       keep: this.options.keep ?? preset.keep,
       keepContext: this.options.keepContext,
       carryInitialPrompt: this.options.carryInitialPrompt,
       initialPrompt: this.options.initialPrompt ?? this.options.prompt,
       language: this.options.language ?? preset.language,
       length: this.options.length ?? preset.length,
+      logprobThreshold: this.options.logprobThreshold,
+      maxDecodeSilenceMs: this.options.maxDecodeSilenceMs,
       maxTokens: this.options.maxTokens ?? preset.maxTokens,
-      noFallback: this.options.noFallback,
+      minSpeechMs: this.options.minSpeechMs,
+      noFallback: this.options.noFallback ?? preset.noFallback,
+      noSpeechThreshold: this.options.noSpeechThreshold,
       printSpecial: this.options.printSpecial,
       saveAudio: this.options.saveAudio,
+      silenceHangoverMs: this.options.silenceHangoverMs,
+      diagnostics: this.options.diagnostics,
       step: this.options.step ?? preset.step,
       threads: this.options.threads,
       tinydiarize: this.options.tinydiarize,
       translate: this.options.translate,
       vadThreshold: this.options.vadThreshold,
+      vadModelPath: this.options.vadModelPath ?? this.config.paths.vadModelPath,
     };
   }
 
   private async buildSupportedStreamOptions(binaryPath: string): Promise<WhisperStreamOptions> {
     const stream = this.buildStreamOptions();
     const prompt = formatDecoderPrompt(stream.initialPrompt);
-    if (!prompt && !stream.carryInitialPrompt) {
+    if (!prompt && !stream.carryInitialPrompt && !stream.vadModelPath) {
       return stream;
     }
 
     const capabilities = await detectWhisperBinaryCapabilities(binaryPath);
+    if (!capabilities.vadModel && stream.vadModelPath) {
+      // Stock whisper-stream cannot gate its positive-step windows. Its VAD
+      // path only works with step 0, so retain the artifact-resistant mode if
+      // the project-owned driver has not been installed yet.
+      if ((this.options.lowLatency ?? true) && this.options.step === undefined) {
+        stream.step = 0;
+        stream.length = defaultStreamPreset.length;
+        stream.keep = defaultStreamPreset.keep;
+        stream.beamSize = defaultStreamPreset.beamSize;
+        stream.maxTokens = defaultStreamPreset.maxTokens;
+      }
+      this.emitWarning(
+        "The selected whisper-stream binary does not support --vad-model. Falling back to VAD-gated live transcription; install vocal-stream to keep low-latency speech-gated previews.",
+        "engine.speechGate.unavailable",
+        { binaryPath, requested: true, supported: false },
+      );
+      stream.vadModelPath = undefined;
+    }
+
     if (!capabilities.prompt && prompt) {
       this.emitWarning(
         "Live decoder prompts were requested, but the configured whisper-stream binary does not support --prompt. Continuing live transcription without prompt hints.",
