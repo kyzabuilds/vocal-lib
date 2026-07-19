@@ -21,7 +21,7 @@ const modelExtensions = new Set([".bin", ".gguf"]);
 
 const binaryNames: Record<WhisperBinaryKind, string[]> = {
   cli: ["whisper-cli", "main"],
-  stream: ["whisper-stream", "stream"],
+  stream: ["vocal-stream", "whisper-stream", "stream"],
 };
 
 const envVars: Record<WhisperBinaryKind, string> = {
@@ -194,6 +194,7 @@ export async function detectWhisperBinaryCapabilities(binaryPath: string): Promi
   const probe = readWhisperHelp(binaryPath).then((help) => ({
     carryInitialPrompt: hasHelpFlag(help, "--carry-initial-prompt"),
     prompt: hasHelpFlag(help, "--prompt"),
+    vadModel: hasHelpFlag(help, "--vad-model"),
   }));
 
   binaryCapabilityCache.set(binaryPath, probe);
@@ -274,7 +275,12 @@ export async function spawnWhisper(options: SpawnWhisperOptions): Promise<SpawnW
 
     if (options.mode === "stream") {
       const stdout = child.stdout;
-      const transcriptFilter = new TranscriptStreamFilter();
+      const transcriptFilter = new TranscriptStreamFilter({
+        onDecision: options.stream?.diagnostics
+          ? (decision) => options.onStderr?.(`vocal-stream: agreement ${JSON.stringify(decision)}\n`)
+          : undefined,
+        trailingSilencePhrases: options.stream?.hallucinationGuardPhrases,
+      });
       let flushTimer: NodeJS.Timeout | undefined;
       const writeFinal = options.onTranscriptFinal ?? (() => undefined);
       const writePreview = options.onTranscriptPreview ?? (() => undefined);
@@ -351,6 +357,7 @@ function buildWhisperArgs(options: SpawnWhisperOptions): string[] {
     }
 
     args.push("-f", options.inputPath);
+    appendDecoderArgs(args, options);
     pushInitialPromptArgs(args, options.initialPrompt, options.carryInitialPrompt);
   } else {
     appendStreamArgs(args, options.stream);
@@ -369,6 +376,12 @@ function appendStreamArgs(args: string[], stream = {} as NonNullable<SpawnWhispe
   pushNumberArg(args, "--audio-ctx", stream.audioContext);
   pushNumberArg(args, "--beam-size", stream.beamSize);
   pushNumberArg(args, "--vad-thold", stream.vadThreshold);
+  pushNumberArg(args, "--no-speech-thold", stream.noSpeechThreshold);
+  pushNumberArg(args, "--logprob-thold", stream.logprobThreshold);
+  pushNumberArg(args, "--min-speech-ms", stream.minSpeechMs);
+  pushNumberArg(args, "--silence-hangover-ms", stream.silenceHangoverMs);
+  pushNumberArg(args, "--max-decode-silence-ms", stream.maxDecodeSilenceMs);
+  pushStringArg(args, "--vad-model", stream.vadModelPath);
   pushNumberArg(args, "--freq-thold", stream.freqThreshold);
 
   if (stream.language) {
@@ -399,7 +412,25 @@ function appendStreamArgs(args: string[], stream = {} as NonNullable<SpawnWhispe
     args.push("--save-audio");
   }
 
+  if (stream.diagnostics) {
+    args.push("--diagnostics");
+  }
+
   pushInitialPromptArgs(args, stream.initialPrompt, stream.carryInitialPrompt);
+}
+
+function appendDecoderArgs(args: string[], options: SpawnWhisperOptions): void {
+  pushNumberArg(args, "--entropy-thold", options.entropyThreshold);
+  pushNumberArg(args, "--logprob-thold", options.logprobThreshold);
+  pushNumberArg(args, "--no-speech-thold", options.noSpeechThreshold);
+
+  if (options.noFallback) {
+    args.push("--no-fallback");
+  }
+
+  if (options.suppressNonSpeechTokens) {
+    args.push("--suppress-nst");
+  }
 }
 
 function pushInitialPromptArgs(
@@ -454,6 +485,12 @@ function cleanPromptPart(value: string | undefined): string | undefined {
 function pushNumberArg(args: string[], flag: string, value: number | undefined): void {
   if (value !== undefined) {
     args.push(flag, String(value));
+  }
+}
+
+function pushStringArg(args: string[], flag: string, value: string | undefined): void {
+  if (value) {
+    args.push(flag, value);
   }
 }
 

@@ -27,6 +27,7 @@ export interface BinaryResolution {
 export interface WhisperBinaryCapabilities {
   carryInitialPrompt: boolean;
   prompt: boolean;
+  vadModel: boolean;
 }
 
 export interface SpawnWhisperOptions {
@@ -34,9 +35,13 @@ export interface SpawnWhisperOptions {
   modelPath: string;
   backend: Backend;
   carryInitialPrompt?: boolean;
+  entropyThreshold?: number;
   initialPrompt?: WhisperDecoderPromptInput;
   inputPath?: string;
+  logprobThreshold?: number;
   mode: WhisperBinaryKind;
+  noFallback?: boolean;
+  noSpeechThreshold?: number;
   onError?: (error: Error) => void;
   onProcessExit?: (event: WhisperProcessExitEvent) => void;
   onStderr?: (chunk: string) => void;
@@ -46,6 +51,7 @@ export interface SpawnWhisperOptions {
   onWarning?: (event: WhisperWarningEvent) => void;
   signal?: AbortSignal;
   stream?: WhisperStreamOptions;
+  suppressNonSpeechTokens?: boolean;
 }
 
 export interface WhisperStreamOptions {
@@ -54,20 +60,28 @@ export interface WhisperStreamOptions {
   carryInitialPrompt?: boolean;
   capture?: number;
   freqThreshold?: number;
+  hallucinationGuardPhrases?: string[];
   keep?: number;
   keepContext?: boolean;
   initialPrompt?: WhisperDecoderPromptInput;
   language?: string;
   length?: number;
+  logprobThreshold?: number;
+  maxDecodeSilenceMs?: number;
   maxTokens?: number;
+  minSpeechMs?: number;
   noFallback?: boolean;
+  noSpeechThreshold?: number;
   printSpecial?: boolean;
   saveAudio?: boolean;
+  silenceHangoverMs?: number;
+  diagnostics?: boolean;
   step?: number;
   threads?: number;
   tinydiarize?: boolean;
   translate?: boolean;
   vadThreshold?: number;
+  vadModelPath?: string;
 }
 
 export interface SpawnWhisperResult {
