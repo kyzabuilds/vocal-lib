@@ -1,2 +1,0 @@
-vocal-stream-vad-test 3 0.000832144
----

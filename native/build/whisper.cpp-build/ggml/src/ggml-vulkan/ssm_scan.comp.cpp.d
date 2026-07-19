@@ -1,1 +1,0 @@
-/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/ssm_scan.comp.cpp: /home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/vulkan-shaders/ssm_scan.comp /home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/vulkan-shaders/types.glsl

@@ -1,1 +1,0 @@
-/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/timestep_embedding.comp.cpp: /home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/vulkan-shaders/timestep_embedding.comp /home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/vulkan-shaders/types.glsl

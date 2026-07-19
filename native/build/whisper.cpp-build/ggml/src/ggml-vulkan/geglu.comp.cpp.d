@@ -1,1 +1,0 @@
-/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/geglu.comp.cpp: /home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/vulkan-shaders/geglu.comp /home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/vulkan-shaders/glu_main.glsl /home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/vulkan-shaders/glu_head.glsl

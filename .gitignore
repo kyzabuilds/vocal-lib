@@ -22,6 +22,9 @@ vendor/whisper.cpp/**/*.dylib
 vendor/whisper.cpp/**/*.dll
 vendor/whisper.cpp/**/*.exe
 
+# CMake and C++ build artifacts.
+native/build/
+
 # Local logs and environment files.
 *.log
 .env

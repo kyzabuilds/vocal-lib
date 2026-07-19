@@ -1,1 +1,0 @@
-/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/topk_nary_search.comp.cpp: /home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/vulkan-shaders/topk_nary_search.comp /home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/vulkan-shaders/types.glsl

@@ -1,1 +1,0 @@
-/usr/bin/c++ -O3 -DNDEBUG -Wl,--dependency-file=CMakeFiles/vocal-stream-vad-test.dir/link.d "CMakeFiles/vocal-stream-vad-test.dir/vad-gate-test.cpp.o" -o vocal-stream-vad-test

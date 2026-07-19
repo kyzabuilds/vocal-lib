@@ -1,1 +1,0 @@
-/home/kyza/Tools/vocal-lib/native/build/Release/./vulkan-shaders-gen
