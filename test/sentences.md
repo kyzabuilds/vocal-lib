@@ -1,0 +1,1 @@
+Today I want to test the live transcription flow with one continuous sentence, because if the model starts dropping commas, inventing extra words, or splitting the thought into fragments, we should catch that immediately, and if it handles this cleanly, then we’ll know the punctuation and streaming behavior are both behaving as expected, right?

@@ -1,0 +1,962 @@
+[
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src",
+  "command": "/usr/bin/cc -DGGML_BUILD -DGGML_COMMIT=\\\"0ae02cd\\\" -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_USE_OPENMP -DGGML_VERSION=\\\"0.15.3\\\" -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_base_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/. -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu11 -fPIC -Wshadow -Wstrict-prototypes -Wpointer-arith -Wmissing-prototypes -Werror=implicit-int -Werror=implicit-function-declaration -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wdouble-promotion -fopenmp -o CMakeFiles/ggml-base.dir/ggml.c.o -c /home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml.c",
+  "file": "/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml.c",
+  "output": "whisper.cpp-build/ggml/src/CMakeFiles/ggml-base.dir/ggml.c.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src",
+  "command": "/usr/bin/c++ -DGGML_BUILD -DGGML_COMMIT=\\\"0ae02cd\\\" -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_USE_OPENMP -DGGML_VERSION=\\\"0.15.3\\\" -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_base_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/. -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -fopenmp -o CMakeFiles/ggml-base.dir/ggml.cpp.o -c /home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml.cpp",
+  "output": "whisper.cpp-build/ggml/src/CMakeFiles/ggml-base.dir/ggml.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src",
+  "command": "/usr/bin/cc -DGGML_BUILD -DGGML_COMMIT=\\\"0ae02cd\\\" -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_USE_OPENMP -DGGML_VERSION=\\\"0.15.3\\\" -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_base_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/. -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu11 -fPIC -Wshadow -Wstrict-prototypes -Wpointer-arith -Wmissing-prototypes -Werror=implicit-int -Werror=implicit-function-declaration -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wdouble-promotion -fopenmp -o CMakeFiles/ggml-base.dir/ggml-alloc.c.o -c /home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-alloc.c",
+  "file": "/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-alloc.c",
+  "output": "whisper.cpp-build/ggml/src/CMakeFiles/ggml-base.dir/ggml-alloc.c.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src",
+  "command": "/usr/bin/c++ -DGGML_BUILD -DGGML_COMMIT=\\\"0ae02cd\\\" -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_USE_OPENMP -DGGML_VERSION=\\\"0.15.3\\\" -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_base_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/. -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -fopenmp -o CMakeFiles/ggml-base.dir/ggml-backend.cpp.o -c /home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-backend.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-backend.cpp",
+  "output": "whisper.cpp-build/ggml/src/CMakeFiles/ggml-base.dir/ggml-backend.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src",
+  "command": "/usr/bin/c++ -DGGML_BUILD -DGGML_COMMIT=\\\"0ae02cd\\\" -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_USE_OPENMP -DGGML_VERSION=\\\"0.15.3\\\" -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_base_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/. -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -fopenmp -o CMakeFiles/ggml-base.dir/ggml-backend-meta.cpp.o -c /home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-backend-meta.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-backend-meta.cpp",
+  "output": "whisper.cpp-build/ggml/src/CMakeFiles/ggml-base.dir/ggml-backend-meta.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src",
+  "command": "/usr/bin/c++ -DGGML_BUILD -DGGML_COMMIT=\\\"0ae02cd\\\" -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_USE_OPENMP -DGGML_VERSION=\\\"0.15.3\\\" -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_base_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/. -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -fopenmp -o CMakeFiles/ggml-base.dir/ggml-opt.cpp.o -c /home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-opt.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-opt.cpp",
+  "output": "whisper.cpp-build/ggml/src/CMakeFiles/ggml-base.dir/ggml-opt.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src",
+  "command": "/usr/bin/c++ -DGGML_BUILD -DGGML_COMMIT=\\\"0ae02cd\\\" -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_USE_OPENMP -DGGML_VERSION=\\\"0.15.3\\\" -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_base_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/. -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -fopenmp -o CMakeFiles/ggml-base.dir/ggml-threading.cpp.o -c /home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-threading.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-threading.cpp",
+  "output": "whisper.cpp-build/ggml/src/CMakeFiles/ggml-base.dir/ggml-threading.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src",
+  "command": "/usr/bin/cc -DGGML_BUILD -DGGML_COMMIT=\\\"0ae02cd\\\" -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_USE_OPENMP -DGGML_VERSION=\\\"0.15.3\\\" -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_base_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/. -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu11 -fPIC -Wshadow -Wstrict-prototypes -Wpointer-arith -Wmissing-prototypes -Werror=implicit-int -Werror=implicit-function-declaration -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wdouble-promotion -fopenmp -o CMakeFiles/ggml-base.dir/ggml-quants.c.o -c /home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-quants.c",
+  "file": "/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-quants.c",
+  "output": "whisper.cpp-build/ggml/src/CMakeFiles/ggml-base.dir/ggml-quants.c.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src",
+  "command": "/usr/bin/c++ -DGGML_BUILD -DGGML_COMMIT=\\\"0ae02cd\\\" -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_USE_OPENMP -DGGML_VERSION=\\\"0.15.3\\\" -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_base_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/. -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -fopenmp -o CMakeFiles/ggml-base.dir/gguf.cpp.o -c /home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/gguf.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/gguf.cpp",
+  "output": "whisper.cpp-build/ggml/src/CMakeFiles/ggml-base.dir/gguf.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src",
+  "command": "/usr/bin/cc -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_USE_CPU_REPACK -DGGML_USE_OPENMP -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cpu_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/.. -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/. -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-cpu -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu11 -fPIC -Wshadow -Wstrict-prototypes -Wpointer-arith -Wmissing-prototypes -Werror=implicit-int -Werror=implicit-function-declaration -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wdouble-promotion -march=native -fopenmp -o CMakeFiles/ggml-cpu.dir/ggml-cpu/ggml-cpu.c.o -c /home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-cpu/ggml-cpu.c",
+  "file": "/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-cpu/ggml-cpu.c",
+  "output": "whisper.cpp-build/ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/ggml-cpu.c.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_USE_CPU_REPACK -DGGML_USE_OPENMP -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cpu_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/.. -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/. -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-cpu -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -march=native -fopenmp -o CMakeFiles/ggml-cpu.dir/ggml-cpu/ggml-cpu.cpp.o -c /home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-cpu/ggml-cpu.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-cpu/ggml-cpu.cpp",
+  "output": "whisper.cpp-build/ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/ggml-cpu.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_USE_CPU_REPACK -DGGML_USE_OPENMP -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cpu_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/.. -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/. -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-cpu -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -march=native -fopenmp -o CMakeFiles/ggml-cpu.dir/ggml-cpu/repack.cpp.o -c /home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-cpu/repack.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-cpu/repack.cpp",
+  "output": "whisper.cpp-build/ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/repack.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_USE_CPU_REPACK -DGGML_USE_OPENMP -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cpu_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/.. -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/. -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-cpu -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -march=native -fopenmp -o CMakeFiles/ggml-cpu.dir/ggml-cpu/hbm.cpp.o -c /home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-cpu/hbm.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-cpu/hbm.cpp",
+  "output": "whisper.cpp-build/ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/hbm.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src",
+  "command": "/usr/bin/cc -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_USE_CPU_REPACK -DGGML_USE_OPENMP -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cpu_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/.. -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/. -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-cpu -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu11 -fPIC -Wshadow -Wstrict-prototypes -Wpointer-arith -Wmissing-prototypes -Werror=implicit-int -Werror=implicit-function-declaration -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wdouble-promotion -march=native -fopenmp -o CMakeFiles/ggml-cpu.dir/ggml-cpu/quants.c.o -c /home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-cpu/quants.c",
+  "file": "/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-cpu/quants.c",
+  "output": "whisper.cpp-build/ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/quants.c.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_USE_CPU_REPACK -DGGML_USE_OPENMP -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cpu_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/.. -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/. -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-cpu -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -march=native -fopenmp -o CMakeFiles/ggml-cpu.dir/ggml-cpu/traits.cpp.o -c /home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-cpu/traits.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-cpu/traits.cpp",
+  "output": "whisper.cpp-build/ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/traits.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_USE_CPU_REPACK -DGGML_USE_OPENMP -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cpu_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/.. -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/. -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-cpu -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -march=native -fopenmp -o CMakeFiles/ggml-cpu.dir/ggml-cpu/amx/amx.cpp.o -c /home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-cpu/amx/amx.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-cpu/amx/amx.cpp",
+  "output": "whisper.cpp-build/ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/amx/amx.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_USE_CPU_REPACK -DGGML_USE_OPENMP -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cpu_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/.. -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/. -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-cpu -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -march=native -fopenmp -o CMakeFiles/ggml-cpu.dir/ggml-cpu/amx/mmq.cpp.o -c /home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-cpu/amx/mmq.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-cpu/amx/mmq.cpp",
+  "output": "whisper.cpp-build/ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/amx/mmq.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_USE_CPU_REPACK -DGGML_USE_OPENMP -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cpu_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/.. -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/. -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-cpu -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -march=native -fopenmp -o CMakeFiles/ggml-cpu.dir/ggml-cpu/binary-ops.cpp.o -c /home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-cpu/binary-ops.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-cpu/binary-ops.cpp",
+  "output": "whisper.cpp-build/ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/binary-ops.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_USE_CPU_REPACK -DGGML_USE_OPENMP -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cpu_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/.. -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/. -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-cpu -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -march=native -fopenmp -o CMakeFiles/ggml-cpu.dir/ggml-cpu/unary-ops.cpp.o -c /home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-cpu/unary-ops.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-cpu/unary-ops.cpp",
+  "output": "whisper.cpp-build/ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/unary-ops.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_USE_CPU_REPACK -DGGML_USE_OPENMP -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cpu_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/.. -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/. -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-cpu -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -march=native -fopenmp -o CMakeFiles/ggml-cpu.dir/ggml-cpu/vec.cpp.o -c /home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-cpu/vec.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-cpu/vec.cpp",
+  "output": "whisper.cpp-build/ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/vec.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_USE_CPU_REPACK -DGGML_USE_OPENMP -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cpu_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/.. -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/. -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-cpu -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -march=native -fopenmp -o CMakeFiles/ggml-cpu.dir/ggml-cpu/ops.cpp.o -c /home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-cpu/ops.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-cpu/ops.cpp",
+  "output": "whisper.cpp-build/ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/ops.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src",
+  "command": "/usr/bin/cc -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_USE_CPU_REPACK -DGGML_USE_OPENMP -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cpu_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/.. -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/. -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-cpu -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu11 -fPIC -Wshadow -Wstrict-prototypes -Wpointer-arith -Wmissing-prototypes -Werror=implicit-int -Werror=implicit-function-declaration -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wdouble-promotion -march=native -fopenmp -o CMakeFiles/ggml-cpu.dir/ggml-cpu/arch/x86/quants.c.o -c /home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-cpu/arch/x86/quants.c",
+  "file": "/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-cpu/arch/x86/quants.c",
+  "output": "whisper.cpp-build/ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/arch/x86/quants.c.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_USE_CPU_REPACK -DGGML_USE_OPENMP -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cpu_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/.. -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/. -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-cpu -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -march=native -fopenmp -o CMakeFiles/ggml-cpu.dir/ggml-cpu/arch/x86/repack.cpp.o -c /home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-cpu/arch/x86/repack.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-cpu/arch/x86/repack.cpp",
+  "output": "whisper.cpp-build/ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/arch/x86/repack.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_SHARED -DGGML_BUILD -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_USE_CPU -DGGML_USE_VULKAN -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml.dir/ggml-backend-dl.cpp.o -c /home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-backend-dl.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-backend-dl.cpp",
+  "output": "whisper.cpp-build/ggml/src/CMakeFiles/ggml.dir/ggml-backend-dl.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_SHARED -DGGML_BUILD -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_USE_CPU -DGGML_USE_VULKAN -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml.dir/ggml-backend-reg.cpp.o -c /home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-backend-reg.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-backend-reg.cpp",
+  "output": "whisper.cpp-build/ggml/src/CMakeFiles/ggml.dir/ggml-backend-reg.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/ggml-vulkan.cpp.o -c /home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/ggml-vulkan.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/ggml-vulkan.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/ggml-vulkan.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/acc.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/acc.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/acc.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/acc.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/add.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/add.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/add.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/add.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/add1.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/add1.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/add1.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/add1.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/add_id.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/add_id.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/add_id.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/add_id.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/arange.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/arange.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/arange.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/arange.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/argmax.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/argmax.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/argmax.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/argmax.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/argsort.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/argsort.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/argsort.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/argsort.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/argsort_large.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/argsort_large.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/argsort_large.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/argsort_large.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/col2im_1d.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/col2im_1d.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/col2im_1d.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/col2im_1d.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/concat.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/concat.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/concat.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/concat.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/contig_copy.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/contig_copy.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/contig_copy.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/contig_copy.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/conv2d_dw.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/conv2d_dw.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/conv2d_dw.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/conv2d_dw.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/conv2d_mm.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/conv2d_mm.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/conv2d_mm.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/conv2d_mm.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/conv3d_mm.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/conv3d_mm.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/conv3d_mm.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/conv3d_mm.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/conv_transpose_1d.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/conv_transpose_1d.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/conv_transpose_1d.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/conv_transpose_1d.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/copy.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/copy.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/copy.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/copy.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/copy_from_quant.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/copy_from_quant.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/copy_from_quant.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/copy_from_quant.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/copy_to_quant.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/copy_to_quant.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/copy_to_quant.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/copy_to_quant.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/copy_transpose.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/copy_transpose.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/copy_transpose.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/copy_transpose.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/count_equal.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/count_equal.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/count_equal.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/count_equal.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/count_experts.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/count_experts.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/count_experts.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/count_experts.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/cumsum.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/cumsum.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/cumsum.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/cumsum.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/cumsum_multipass1.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/cumsum_multipass1.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/cumsum_multipass1.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/cumsum_multipass1.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/cumsum_multipass2.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/cumsum_multipass2.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/cumsum_multipass2.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/cumsum_multipass2.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/dequant_f32.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/dequant_f32.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/dequant_f32.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/dequant_f32.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/dequant_iq1_m.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/dequant_iq1_m.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/dequant_iq1_m.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/dequant_iq1_m.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/dequant_iq1_s.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/dequant_iq1_s.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/dequant_iq1_s.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/dequant_iq1_s.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/dequant_iq2_s.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/dequant_iq2_s.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/dequant_iq2_s.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/dequant_iq2_s.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/dequant_iq2_xs.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/dequant_iq2_xs.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/dequant_iq2_xs.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/dequant_iq2_xs.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/dequant_iq2_xxs.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/dequant_iq2_xxs.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/dequant_iq2_xxs.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/dequant_iq2_xxs.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/dequant_iq3_s.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/dequant_iq3_s.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/dequant_iq3_s.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/dequant_iq3_s.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/dequant_iq3_xxs.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/dequant_iq3_xxs.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/dequant_iq3_xxs.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/dequant_iq3_xxs.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/dequant_iq4_nl.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/dequant_iq4_nl.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/dequant_iq4_nl.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/dequant_iq4_nl.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/dequant_iq4_xs.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/dequant_iq4_xs.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/dequant_iq4_xs.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/dequant_iq4_xs.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/dequant_mxfp4.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/dequant_mxfp4.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/dequant_mxfp4.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/dequant_mxfp4.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/dequant_nvfp4.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/dequant_nvfp4.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/dequant_nvfp4.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/dequant_nvfp4.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/dequant_q1_0.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/dequant_q1_0.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/dequant_q1_0.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/dequant_q1_0.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/dequant_q2_k.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/dequant_q2_k.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/dequant_q2_k.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/dequant_q2_k.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/dequant_q3_k.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/dequant_q3_k.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/dequant_q3_k.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/dequant_q3_k.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/dequant_q4_0.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/dequant_q4_0.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/dequant_q4_0.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/dequant_q4_0.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/dequant_q4_1.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/dequant_q4_1.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/dequant_q4_1.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/dequant_q4_1.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/dequant_q4_k.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/dequant_q4_k.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/dequant_q4_k.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/dequant_q4_k.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/dequant_q5_0.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/dequant_q5_0.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/dequant_q5_0.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/dequant_q5_0.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/dequant_q5_1.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/dequant_q5_1.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/dequant_q5_1.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/dequant_q5_1.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/dequant_q5_k.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/dequant_q5_k.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/dequant_q5_k.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/dequant_q5_k.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/dequant_q6_k.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/dequant_q6_k.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/dequant_q6_k.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/dequant_q6_k.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/dequant_q8_0.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/dequant_q8_0.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/dequant_q8_0.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/dequant_q8_0.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/diag.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/diag.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/diag.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/diag.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/diag_mask_inf.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/diag_mask_inf.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/diag_mask_inf.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/diag_mask_inf.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/div.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/div.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/div.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/div.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/fill.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/fill.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/fill.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/fill.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/flash_attn.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/flash_attn.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/flash_attn.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/flash_attn.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/flash_attn_cm1.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/flash_attn_cm1.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/flash_attn_cm1.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/flash_attn_cm1.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/flash_attn_cm2.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/flash_attn_cm2.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/flash_attn_cm2.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/flash_attn_cm2.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/flash_attn_mask_opt.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/flash_attn_mask_opt.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/flash_attn_mask_opt.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/flash_attn_mask_opt.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/flash_attn_split_k_reduce.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/flash_attn_split_k_reduce.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/flash_attn_split_k_reduce.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/flash_attn_split_k_reduce.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/fwht.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/fwht.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/fwht.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/fwht.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/gated_delta_net.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/gated_delta_net.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/gated_delta_net.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/gated_delta_net.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/geglu.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/geglu.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/geglu.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/geglu.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/geglu_erf.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/geglu_erf.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/geglu_erf.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/geglu_erf.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/geglu_quick.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/geglu_quick.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/geglu_quick.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/geglu_quick.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/get_rows.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/get_rows.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/get_rows.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/get_rows.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/get_rows_back.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/get_rows_back.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/get_rows_back.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/get_rows_back.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/get_rows_quant.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/get_rows_quant.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/get_rows_quant.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/get_rows_quant.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/group_norm.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/group_norm.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/group_norm.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/group_norm.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/im2col.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/im2col.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/im2col.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/im2col.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/im2col_3d.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/im2col_3d.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/im2col_3d.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/im2col_3d.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/l2_norm.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/l2_norm.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/l2_norm.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/l2_norm.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/log.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/log.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/log.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/log.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/mul.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/mul.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/mul.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/mul.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/mul_mat_split_k_reduce.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/mul_mat_split_k_reduce.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/mul_mat_split_k_reduce.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/mul_mat_split_k_reduce.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/mul_mat_vec.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/mul_mat_vec.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/mul_mat_vec.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/mul_mat_vec.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/mul_mat_vec_iq1_m.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/mul_mat_vec_iq1_m.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/mul_mat_vec_iq1_m.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/mul_mat_vec_iq1_m.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/mul_mat_vec_iq1_s.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/mul_mat_vec_iq1_s.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/mul_mat_vec_iq1_s.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/mul_mat_vec_iq1_s.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/mul_mat_vec_iq2_s.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/mul_mat_vec_iq2_s.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/mul_mat_vec_iq2_s.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/mul_mat_vec_iq2_s.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/mul_mat_vec_iq2_xs.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/mul_mat_vec_iq2_xs.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/mul_mat_vec_iq2_xs.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/mul_mat_vec_iq2_xs.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/mul_mat_vec_iq2_xxs.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/mul_mat_vec_iq2_xxs.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/mul_mat_vec_iq2_xxs.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/mul_mat_vec_iq2_xxs.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/mul_mat_vec_iq3_s.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/mul_mat_vec_iq3_s.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/mul_mat_vec_iq3_s.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/mul_mat_vec_iq3_s.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/mul_mat_vec_iq3_xxs.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/mul_mat_vec_iq3_xxs.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/mul_mat_vec_iq3_xxs.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/mul_mat_vec_iq3_xxs.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/mul_mat_vec_nc.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/mul_mat_vec_nc.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/mul_mat_vec_nc.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/mul_mat_vec_nc.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/mul_mat_vec_p021.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/mul_mat_vec_p021.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/mul_mat_vec_p021.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/mul_mat_vec_p021.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/mul_mat_vec_q2_k.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/mul_mat_vec_q2_k.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/mul_mat_vec_q2_k.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/mul_mat_vec_q2_k.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/mul_mat_vec_q3_k.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/mul_mat_vec_q3_k.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/mul_mat_vec_q3_k.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/mul_mat_vec_q3_k.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/mul_mat_vec_q4_k.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/mul_mat_vec_q4_k.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/mul_mat_vec_q4_k.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/mul_mat_vec_q4_k.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/mul_mat_vec_q5_k.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/mul_mat_vec_q5_k.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/mul_mat_vec_q5_k.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/mul_mat_vec_q5_k.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/mul_mat_vec_q6_k.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/mul_mat_vec_q6_k.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/mul_mat_vec_q6_k.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/mul_mat_vec_q6_k.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/mul_mat_vecq.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/mul_mat_vecq.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/mul_mat_vecq.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/mul_mat_vecq.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/mul_mm.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/mul_mm.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/mul_mm.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/mul_mm.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/mul_mm_cm2.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/mul_mm_cm2.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/mul_mm_cm2.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/mul_mm_cm2.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/mul_mmq.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/mul_mmq.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/mul_mmq.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/mul_mmq.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/multi_add.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/multi_add.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/multi_add.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/multi_add.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/norm.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/norm.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/norm.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/norm.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/opt_step_adamw.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/opt_step_adamw.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/opt_step_adamw.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/opt_step_adamw.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/opt_step_sgd.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/opt_step_sgd.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/opt_step_sgd.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/opt_step_sgd.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/pad.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/pad.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/pad.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/pad.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/pool2d.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/pool2d.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/pool2d.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/pool2d.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/quantize_q8_1.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/quantize_q8_1.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/quantize_q8_1.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/quantize_q8_1.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/reglu.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/reglu.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/reglu.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/reglu.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/repeat.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/repeat.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/repeat.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/repeat.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/repeat_back.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/repeat_back.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/repeat_back.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/repeat_back.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/rms_norm.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/rms_norm.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/rms_norm.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/rms_norm.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/rms_norm_back.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/rms_norm_back.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/rms_norm_back.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/rms_norm_back.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/rms_norm_partials.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/rms_norm_partials.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/rms_norm_partials.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/rms_norm_partials.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/roll.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/roll.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/roll.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/roll.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/rope_multi.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/rope_multi.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/rope_multi.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/rope_multi.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/rope_neox.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/rope_neox.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/rope_neox.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/rope_neox.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/rope_norm.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/rope_norm.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/rope_norm.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/rope_norm.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/rope_vision.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/rope_vision.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/rope_vision.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/rope_vision.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/scale.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/scale.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/scale.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/scale.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/silu_back.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/silu_back.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/silu_back.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/silu_back.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/snake.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/snake.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/snake.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/snake.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/soft_max.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/soft_max.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/soft_max.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/soft_max.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/soft_max_back.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/soft_max_back.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/soft_max_back.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/soft_max_back.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/soft_max_large1.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/soft_max_large1.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/soft_max_large1.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/soft_max_large1.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/soft_max_large2.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/soft_max_large2.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/soft_max_large2.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/soft_max_large2.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/soft_max_large3.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/soft_max_large3.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/soft_max_large3.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/soft_max_large3.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/solve_tri.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/solve_tri.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/solve_tri.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/solve_tri.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/ssm_conv.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/ssm_conv.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/ssm_conv.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/ssm_conv.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/ssm_scan.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/ssm_scan.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/ssm_scan.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/ssm_scan.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/sub.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/sub.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/sub.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/sub.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/sum_rows.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/sum_rows.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/sum_rows.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/sum_rows.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/swiglu.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/swiglu.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/swiglu.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/swiglu.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/swiglu_oai.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/swiglu_oai.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/swiglu_oai.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/swiglu_oai.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/timestep_embedding.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/timestep_embedding.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/timestep_embedding.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/timestep_embedding.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/topk_argsort.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/topk_argsort.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/topk_argsort.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/topk_argsort.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/topk_moe.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/topk_moe.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/topk_moe.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/topk_moe.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/topk_nary_search.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/topk_nary_search.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/topk_nary_search.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/topk_nary_search.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/tri.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/tri.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/tri.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/tri.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/unary.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/unary.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/unary.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/unary.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/upscale.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/upscale.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/upscale.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/upscale.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/wkv6.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/wkv6.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/wkv6.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/wkv6.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VULKAN_BFLOAT16_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT2_GLSLC_SUPPORT -DGGML_VULKAN_COOPMAT_GLSLC_SUPPORT -DGGML_VULKAN_INTEGER_DOT_GLSLC_SUPPORT -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_vulkan_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/ggml-vulkan/.. -I/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -std=gnu++17 -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-vulkan.dir/wkv7.comp.cpp.o -c /home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/wkv7.comp.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/ggml/src/ggml-vulkan/wkv7.comp.cpp",
+  "output": "whisper.cpp-build/ggml/src/ggml-vulkan/CMakeFiles/ggml-vulkan.dir/wkv7.comp.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/src",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_SHARED -DGGML_SHARED -DGGML_USE_CPU -DGGML_USE_VULKAN -DWHISPER_BUILD -DWHISPER_SHARED -DWHISPER_VERSION=\\\"1.9.1\\\" -Dwhisper_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/src/. -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/src/../include -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -o CMakeFiles/whisper.dir/whisper.cpp.o -c /home/kyza/Tools/vocal-lib/vendor/whisper.cpp/src/whisper.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/src/whisper.cpp",
+  "output": "whisper.cpp-build/src/CMakeFiles/whisper.dir/whisper.cpp.o"
+},
+{
+  "directory": "/home/kyza/Tools/vocal-lib/native/build/whisper.cpp-build/src",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_SHARED -DGGML_SHARED -DGGML_USE_CPU -DGGML_USE_VULKAN -DPARAKEET_BUILD -DPARAKEET_SHARED -DPARAKEET_VERSION=\\\"1.9.1\\\" -Dparakeet_EXPORTS -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/src/. -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/src/../include -I/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/ggml/src/../include -O3 -DNDEBUG -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -o CMakeFiles/parakeet.dir/parakeet.cpp.o -c /home/kyza/Tools/vocal-lib/vendor/whisper.cpp/src/parakeet.cpp",
+  "file": "/home/kyza/Tools/vocal-lib/vendor/whisper.cpp/src/parakeet.cpp",
+  "output": "whisper.cpp-build/src/CMakeFiles/parakeet.dir/parakeet.cpp.o"
+}
+]

@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -O3 -DNDEBUG -shared -Wl,--dependency-file=CMakeFiles/parakeet.dir/link.d -Wl,-soname,libparakeet.so.1 -o ../../bin/libparakeet.so.1.9.1 CMakeFiles/parakeet.dir/parakeet.cpp.o  -Wl,-rpath,/home/kyza/Tools/vocal-lib/native/build/bin: ../../bin/libggml.so.0.15.3 ../../bin/libggml-cpu.so.0.15.3 ../../bin/libggml-vulkan.so.0.15.3 ../../bin/libggml-base.so.0.15.3
