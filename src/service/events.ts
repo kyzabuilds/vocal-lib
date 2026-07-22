@@ -50,6 +50,20 @@ export interface SessionStoppedEvent {
   metadata?: JsonObject;
 }
 
+/** Normalized, best-effort microphone meter data for a live session. */
+export interface AudioVisualizationEvent {
+  sessionId: string;
+  timestamp: number;
+  sequence: number;
+  rms: number;
+  peak: number;
+  level: number;
+  vadProbability?: number;
+  speech?: boolean;
+  active?: boolean;
+  bands?: number[];
+}
+
 export type LiveSessionStatus = "starting" | "running" | "stopping" | "stopped" | "error";
 
 export interface LiveTranscriptionOptions {
@@ -106,6 +120,14 @@ export interface LiveTranscriptionOptions {
   vadThreshold?: number;
   /** Path to the Silero VAD model used by the project-owned vocal-stream driver. */
   vadModelPath?: string;
+  /** Project-owned live driver meter. Omitted/disabled preserves prior behavior. */
+  visualization?: {
+    enabled?: boolean;
+    /** Default: 33 ms (about 30 events/second). */
+    intervalMs?: number;
+    /** Optional temporal waveform buckets; default: 0 (omitted). */
+    bands?: number;
+  };
 }
 
 export interface FileTranscriptionOptions {

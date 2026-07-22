@@ -25,6 +25,7 @@ export interface BinaryResolution {
 }
 
 export interface WhisperBinaryCapabilities {
+  audioVisualization: boolean;
   carryInitialPrompt: boolean;
   prompt: boolean;
   vadModel: boolean;
@@ -43,6 +44,7 @@ export interface SpawnWhisperOptions {
   noFallback?: boolean;
   noSpeechThreshold?: number;
   onError?: (error: Error) => void;
+  onAudioVisualization?: (event: AudioVisualizationData) => void;
   onProcessExit?: (event: WhisperProcessExitEvent) => void;
   onStderr?: (chunk: string) => void;
   onStdout?: (chunk: string) => void;
@@ -82,6 +84,28 @@ export interface WhisperStreamOptions {
   translate?: boolean;
   vadThreshold?: number;
   vadModelPath?: string;
+  visualization?: AudioVisualizationOptions;
+}
+
+export interface AudioVisualizationOptions {
+  /** Opt in to project-owned live capture meter events. Default: false. */
+  enabled?: boolean;
+  /** Event interval in milliseconds. Clamped by the native driver to 33..1000. Default: 33. */
+  intervalMs?: number;
+  /** Optional temporal waveform buckets. Zero omits bands. Default: 0, maximum: 32. */
+  bands?: number;
+}
+
+export interface AudioVisualizationData {
+  timestamp: number;
+  sequence: number;
+  rms: number;
+  peak: number;
+  level: number;
+  vadProbability?: number;
+  speech?: boolean;
+  active?: boolean;
+  bands?: number[];
 }
 
 export interface SpawnWhisperResult {

@@ -17,6 +17,9 @@ public:
     bool init(int capture_id, int sample_rate);
     bool resume();
     void drain(std::vector<float> & output);
+    // Independently drains recent capture samples for best-effort UI metering.
+    // This never consumes or delays the decoder backlog.
+    void drain_meter(std::vector<float> & output);
 
 private:
     void callback(uint8_t * stream, int length);
@@ -29,6 +32,9 @@ private:
     std::vector<float> audio_;
     size_t audio_position_ = 0;
     size_t audio_length_ = 0;
+    std::vector<float> meter_audio_;
+    size_t meter_position_ = 0;
+    size_t meter_length_ = 0;
 };
 
 bool poll_capture_events();

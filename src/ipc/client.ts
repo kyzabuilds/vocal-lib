@@ -7,6 +7,7 @@ import { fileURLToPath } from "node:url";
 import type { DoctorOptions, DoctorResult } from "../service/diagnostics.js";
 import type {
   FileTranscriptionOptions,
+  AudioVisualizationEvent,
   LiveTranscriptionOptions,
   SessionErrorEvent,
   SessionStatusEvent,
@@ -45,6 +46,7 @@ export interface VocalGatewayStartedEvent {
 }
 
 export interface VocalGatewayClientEvents {
+  "session.audio": [AudioVisualizationEvent];
   "session.error": [SessionErrorEvent];
   "session.started": [VocalGatewayStartedEvent];
   "session.status": [SessionStatusEvent];
@@ -65,6 +67,7 @@ interface ManagedGatewayProcess {
 }
 
 export type VocalClientTranscriptEvent =
+  | ({ type: "audio" } & Omit<AudioVisualizationEvent, "sessionId">)
   | { type: "preview"; text: string }
   | { type: "final"; text: string }
   | { type: "polished"; text: string; sourceText?: string }
@@ -113,6 +116,7 @@ export interface VocalClientListenOptions {
   translate?: boolean;
   vadThreshold?: number;
   vadModelPath?: string;
+  visualization?: LiveTranscriptionOptions["visualization"];
 }
 
 export interface VocalClientTranscribeOptions extends Omit<
@@ -284,6 +288,7 @@ class GatewaySession extends EventEmitter implements VocalGatewaySession {
   ) {
     super();
     for (const eventName of [
+      "session.audio",
       "session.error",
       "session.status",
       "session.stopped",
@@ -538,6 +543,12 @@ function bindTranscriptQueue(
   onSessionEvent: () => void = () => undefined,
 ): () => void {
   const handlers = {
+    "session.audio": (event: unknown) => {
+      if (matchesSession(event, sessionId) && isRecord(event)) {
+        const { sessionId: _sessionId, ...payload } = event;
+        queue.push({ type: "audio", ...payload } as VocalClientTranscriptEvent);
+      }
+    },
     "session.error": (event: unknown) => {
       if (matchesSession(event, sessionId)) {
         onSessionEvent();

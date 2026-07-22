@@ -7,11 +7,12 @@ import {
   resolveConfiguredWhisperBinary,
   spawnWhisper,
 } from "../engine/whisper-process.js";
-import type { SpawnWhisperResult, WhisperStreamOptions } from "../engine/types.js";
+import type { AudioVisualizationData, SpawnWhisperResult, WhisperStreamOptions } from "../engine/types.js";
 import type { ResolvedVocalConfig } from "./config.js";
 import { whisperPathConfig } from "./config.js";
 import type {
   LiveSessionStatus,
+  AudioVisualizationEvent,
   LiveTranscriptionOptions,
   SessionErrorEvent,
   SessionStatusEvent,
@@ -31,6 +32,7 @@ export interface LiveSessionSnapshot {
 }
 
 export interface LiveSessionEvents {
+  audio: [AudioVisualizationEvent];
   error: [SessionErrorEvent];
   final: [TranscriptFinalEvent];
   polished: [TranscriptPolishedEvent];
@@ -86,6 +88,7 @@ export class LiveSession extends EventEmitter {
   private runPromise: Promise<void> | undefined;
   private statusValue: LiveSessionStatus = "starting";
   private polisher: TranscriptPolisher | undefined;
+  private mockAudioTimer: NodeJS.Timeout | undefined;
 
   constructor(
     private readonly config: ResolvedVocalConfig,
@@ -148,6 +151,7 @@ export class LiveSession extends EventEmitter {
       mode: "stream",
       modelPath,
       onError: (error) => this.emitError(error),
+      onAudioVisualization: (event) => this.emitAudio(event),
       onProcessExit: (result) => {
         this.result = result;
       },
@@ -180,6 +184,8 @@ export class LiveSession extends EventEmitter {
     this.setStatus("stopping");
     this.abortController.abort();
     if (this.config.mock) {
+      if (this.mockAudioTimer) clearInterval(this.mockAudioTimer);
+      this.mockAudioTimer = undefined;
       this.result = { exitCode: 0, signal: null };
       this.setStatus("stopped");
       this.emit("stopped", {
@@ -206,12 +212,32 @@ export class LiveSession extends EventEmitter {
     this.createPolisher();
     this.setStatus("running");
     const finalText = "mock transcription ready";
+    if (this.options.visualization?.enabled) {
+      let sequence = 0;
+      const intervalMs = this.options.visualization.intervalMs ?? 33;
+      this.mockAudioTimer = setInterval(() => {
+        const levels = [0.08, 0.42, 0.76, 0.24];
+        const level = levels[sequence % levels.length];
+        this.emitAudio({
+          timestamp: sequence * intervalMs,
+          sequence,
+          rms: level * 0.65,
+          peak: Math.min(1, level * 1.2),
+          level,
+          vadProbability: level > 0.35 ? 0.9 : 0.1,
+          speech: level > 0.35,
+          active: level > 0.35,
+        });
+        sequence += 1;
+      }, intervalMs);
+      this.mockAudioTimer.unref?.();
+    }
     const timer = setTimeout(() => {
       if (this.statusValue === "stopping" || this.statusValue === "stopped") {
         return;
       }
       void this.completeMock(finalText);
-    }, 25);
+    }, this.options.visualization?.enabled ? 180 : 25);
     this.runPromise = new Promise((resolve) => {
       this.once("stopped", () => {
         clearTimeout(timer);
@@ -221,6 +247,8 @@ export class LiveSession extends EventEmitter {
   }
 
   private async completeMock(finalText: string): Promise<void> {
+    if (this.mockAudioTimer) clearInterval(this.mockAudioTimer);
+    this.mockAudioTimer = undefined;
     this.emitPreview("mock transcription", "mock transcription");
     this.emitFinal(finalText, finalText);
     await this.pendingPolish;
@@ -265,6 +293,11 @@ export class LiveSession extends EventEmitter {
       translate: this.options.translate,
       vadThreshold: this.options.vadThreshold,
       vadModelPath: this.options.vadModelPath ?? this.config.paths.vadModelPath,
+      visualization: this.options.visualization?.enabled ? {
+        enabled: true,
+        intervalMs: this.options.visualization.intervalMs ?? 33,
+        bands: this.options.visualization.bands ?? 0,
+      } : undefined,
     };
   }
 
@@ -276,6 +309,14 @@ export class LiveSession extends EventEmitter {
     }
 
     const capabilities = await detectWhisperBinaryCapabilities(binaryPath);
+    if (stream.visualization?.enabled && !capabilities.audioVisualization) {
+      this.emitWarning(
+        "Audio visualization is unavailable for the selected stock stream driver; transcription will continue normally.",
+        "engine.visualization.unsupported",
+        { binaryPath, requested: true, supported: false },
+      );
+      stream.visualization = undefined;
+    }
     if (!capabilities.vadModel && stream.vadModelPath) {
       // Stock whisper-stream cannot gate its positive-step windows. Its VAD
       // path only works with step 0, so retain the artifact-resistant mode if
@@ -355,6 +396,11 @@ export class LiveSession extends EventEmitter {
       raw,
       metadata: this.options.metadata,
     });
+  }
+
+  private emitAudio(event: AudioVisualizationData): void {
+    if (!this.options.visualization?.enabled || this.statusValue !== "running") return;
+    this.emit("audio", { ...event, sessionId: this.sessionId });
   }
 
   private emitFinal(text: string, raw: string): void {

@@ -28,6 +28,7 @@ export type { ResolvedVocalConfig, VocalServiceConfigInput } from "./service/con
 export type {
   FileTranscriptionOptions,
   FileTranscriptionResult,
+  AudioVisualizationEvent,
   JsonObject,
   JsonValue,
   LiveSessionStatus,
@@ -51,4 +52,4 @@ export type {
   PolishedTranscriptEvent,
   TranscriptPolisherProvider,
 } from "./engine/transcript-polisher.js";
-export type { Backend, WhisperDecoderPrompt, WhisperDecoderPromptInput, WhisperStreamOptions } from "./engine/types.js";
+export type { AudioVisualizationData, AudioVisualizationOptions, Backend, WhisperDecoderPrompt, WhisperDecoderPromptInput, WhisperStreamOptions } from "./engine/types.js";

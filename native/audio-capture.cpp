@@ -32,7 +32,9 @@ bool audio_capture::init(int capture_id, int sample_rate) {
     requested.freq = sample_rate;
     requested.format = AUDIO_F32;
     requested.channels = 1;
-    requested.samples = 1024;
+    // 512 samples at 16 kHz gives the meter fresh capture data about every
+    // 32 ms while remaining a conventional, inexpensive SDL callback size.
+    requested.samples = 512;
     requested.callback = [](void * user_data, uint8_t * stream, int length) {
         static_cast<audio_capture *>(user_data)->callback(stream, length);
     };
@@ -57,6 +59,7 @@ bool audio_capture::init(int capture_id, int sample_rate) {
         __func__, obtained.freq, obtained.format, obtained.channels, obtained.samples);
     sample_rate_ = obtained.freq;
     audio_.resize((sample_rate_ * length_ms_) / 1000);
+    meter_audio_.resize(static_cast<size_t>(sample_rate_));
     return true;
 }
 
@@ -87,6 +90,19 @@ void audio_capture::callback(uint8_t * stream, int length) {
     }
     audio_position_ = (audio_position_ + sample_count) % audio_.size();
     audio_length_ = std::min(audio_length_ + sample_count, audio_.size());
+
+    const size_t meter_count = std::min(sample_count, meter_audio_.size());
+    const uint8_t * meter_stream = stream + (sample_count - meter_count) * sizeof(float);
+    if (meter_position_ + meter_count > meter_audio_.size()) {
+        const size_t first_count = meter_audio_.size() - meter_position_;
+        std::memcpy(&meter_audio_[meter_position_], meter_stream, first_count * sizeof(float));
+        std::memcpy(&meter_audio_[0], meter_stream + first_count * sizeof(float),
+            (meter_count - first_count) * sizeof(float));
+    } else {
+        std::memcpy(&meter_audio_[meter_position_], meter_stream, meter_count * sizeof(float));
+    }
+    meter_position_ = (meter_position_ + meter_count) % meter_audio_.size();
+    meter_length_ = std::min(meter_length_ + meter_count, meter_audio_.size());
 }
 
 void audio_capture::drain(std::vector<float> & output) {
@@ -105,6 +121,24 @@ void audio_capture::drain(std::vector<float> & output) {
         std::memcpy(output.data(), &audio_[start], audio_length_ * sizeof(float));
     }
     audio_length_ = 0;
+}
+
+void audio_capture::drain_meter(std::vector<float> & output) {
+    output.clear();
+    if (!device_id_ || !running_) return;
+
+    std::lock_guard<std::mutex> lock(mutex_);
+    output.resize(meter_length_);
+    const size_t start = (meter_position_ + meter_audio_.size() - meter_length_) % meter_audio_.size();
+    if (start + meter_length_ > meter_audio_.size()) {
+        const size_t first_count = meter_audio_.size() - start;
+        std::memcpy(output.data(), &meter_audio_[start], first_count * sizeof(float));
+        std::memcpy(output.data() + first_count, &meter_audio_[0],
+            (meter_length_ - first_count) * sizeof(float));
+    } else if (meter_length_ > 0) {
+        std::memcpy(output.data(), &meter_audio_[start], meter_length_ * sizeof(float));
+    }
+    meter_length_ = 0;
 }
 
 bool poll_capture_events() {

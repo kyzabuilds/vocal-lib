@@ -188,6 +188,7 @@ export class VocalIpcServer {
   }
 
   private bindSessionEvents(connection: EnvelopeConnection, session: Awaited<ReturnType<VocalService["startLiveTranscription"]>>): void {
+    session.on("audio", (payload) => this.event(connection, "session.audio", payload, session.sessionId, true));
     session.on("status", (payload) => this.event(connection, "session.status", payload, session.sessionId));
     session.on("preview", (payload) => this.event(connection, "transcript.preview", payload, session.sessionId));
     session.on("final", (payload) => this.event(connection, "transcript.final", payload, session.sessionId));
@@ -206,13 +207,13 @@ export class VocalIpcServer {
     }));
   }
 
-  private event(connection: EnvelopeConnection, method: string, payload: unknown, sessionId?: string): void {
+  private event(connection: EnvelopeConnection, method: string, payload: unknown, sessionId?: string, droppable = false): void {
     connection.send(createEnvelope({
       method,
       payload,
       sessionId,
       type: "event",
-    }));
+    }), droppable);
   }
 
   private async cleanupClient(client: ClientState): Promise<void> {
@@ -275,7 +276,22 @@ function normalizeLiveOptions(payload: Record<string, unknown>): LiveTranscripti
     translate: booleanValue(payload.translate),
     vadThreshold: numberValue(payload.vadThreshold),
     vadModelPath: stringValue(payload.vadModelPath),
+    visualization: visualizationValue(payload.visualization),
   };
+}
+
+function visualizationValue(value: unknown): LiveTranscriptionOptions["visualization"] {
+  if (!value || typeof value !== "object" || Array.isArray(value)) return undefined;
+  const record = value as Record<string, unknown>;
+  const intervalMs = numberValue(record.intervalMs);
+  const bands = numberValue(record.bands);
+  if (intervalMs !== undefined && (!Number.isInteger(intervalMs) || intervalMs < 33 || intervalMs > 1000)) {
+    throw new Error("visualization.intervalMs must be an integer between 33 and 1000.");
+  }
+  if (bands !== undefined && (!Number.isInteger(bands) || bands < 0 || bands > 32)) {
+    throw new Error("visualization.bands must be an integer between 0 and 32.");
+  }
+  return { enabled: booleanValue(record.enabled), intervalMs, bands };
 }
 
 function normalizeFileOptions(payload: Record<string, unknown>): FileTranscriptionOptions {

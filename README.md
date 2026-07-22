@@ -93,6 +93,17 @@ interaction target:
 | `threads` | whisper default | Tune CPU fallback performance. |
 | `noFallback` | `true` | Leave enabled to reduce artifact-prone retries. |
 | `polish` | disabled | Enable fail-open OpenRouter cleanup. |
+| `visualization.enabled` | `false` | Opt in to normalized live microphone meter events. |
+| `visualization.intervalMs` | `33` | Meter interval (33–1000 ms; about 30 Hz by default). |
+| `visualization.bands` | `0` | Optional temporal waveform buckets (0–32); zero omits them. |
+
+When enabled with the project-owned `vocal-stream`, live sessions emit typed
+`audio` events and IPC `session.audio` envelopes. Payloads contain
+`timestamp`, `sequence`, normalized `rms`, `peak`, smoothed `level`, and optional
+VAD/speech/band fields. Values are relative full-scale microphone measurements,
+not calibrated decibels. Events are best-effort and droppable under transport
+backpressure. Stock `whisper-stream` binaries do not expose project capture
+samples, so the service warns once and continues without visualization.
 
 ### Recommended Configurations
 

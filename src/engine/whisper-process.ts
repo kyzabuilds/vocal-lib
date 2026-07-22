@@ -15,6 +15,7 @@ import type {
   WhisperDecoderPromptInput,
   WhisperPathConfig,
   WhisperBinaryKind,
+  AudioVisualizationData,
 } from "./types.js";
 
 const modelExtensions = new Set([".bin", ".gguf"]);
@@ -192,6 +193,7 @@ export async function detectWhisperBinaryCapabilities(binaryPath: string): Promi
   }
 
   const probe = readWhisperHelp(binaryPath).then((help) => ({
+    audioVisualization: hasHelpFlag(help, "--visualization"),
     carryInitialPrompt: hasHelpFlag(help, "--carry-initial-prompt"),
     prompt: hasHelpFlag(help, "--prompt"),
     vadModel: hasHelpFlag(help, "--vad-model"),
@@ -258,7 +260,9 @@ export async function spawnWhisper(options: SpawnWhisperOptions): Promise<SpawnW
 
   return await new Promise<SpawnWhisperResult>((resolvePromise, reject) => {
     const child = spawn(options.binaryPath, args, {
-      stdio: ["ignore", "pipe", "pipe"],
+      stdio: options.mode === "stream" && options.stream?.visualization?.enabled
+        ? ["ignore", "pipe", "pipe", "pipe"]
+        : ["ignore", "pipe", "pipe"],
       cwd: dirname(options.binaryPath),
     });
     const stopChild = (): void => {
@@ -274,6 +278,20 @@ export async function spawnWhisper(options: SpawnWhisperOptions): Promise<SpawnW
     }
 
     if (options.mode === "stream") {
+      const eventStream = child.stdio[3];
+      if (eventStream && "setEncoding" in eventStream) {
+        let remainder = "";
+        eventStream.setEncoding("utf8");
+        eventStream.on("data", (chunk: string) => {
+          remainder += chunk;
+          const lines = remainder.split("\n");
+          remainder = lines.pop() ?? "";
+          for (const line of lines) {
+            const event = parseAudioVisualizationData(line);
+            if (event) options.onAudioVisualization?.(event);
+          }
+        });
+      }
       const stdout = child.stdout;
       const transcriptFilter = new TranscriptStreamFilter({
         onDecision: options.stream?.diagnostics
@@ -383,6 +401,11 @@ function appendStreamArgs(args: string[], stream = {} as NonNullable<SpawnWhispe
   pushNumberArg(args, "--max-decode-silence-ms", stream.maxDecodeSilenceMs);
   pushStringArg(args, "--vad-model", stream.vadModelPath);
   pushNumberArg(args, "--freq-thold", stream.freqThreshold);
+  if (stream.visualization?.enabled) {
+    args.push("--visualization");
+    pushNumberArg(args, "--visualization-interval", stream.visualization.intervalMs);
+    pushNumberArg(args, "--visualization-bands", stream.visualization.bands);
+  }
 
   if (stream.language) {
     args.push("--language", stream.language);
@@ -417,6 +440,33 @@ function appendStreamArgs(args: string[], stream = {} as NonNullable<SpawnWhispe
   }
 
   pushInitialPromptArgs(args, stream.initialPrompt, stream.carryInitialPrompt);
+}
+
+export function parseAudioVisualizationData(line: string): AudioVisualizationData | null {
+  let value: unknown;
+  try {
+    value = JSON.parse(line);
+  } catch {
+    return null;
+  }
+  if (!value || typeof value !== "object") return null;
+  const event = value as Record<string, unknown>;
+  for (const key of ["timestamp", "sequence", "rms", "peak", "level"] as const) {
+    if (typeof event[key] !== "number" || !Number.isFinite(event[key])) return null;
+  }
+  const timestamp = event.timestamp as number;
+  const sequence = event.sequence as number;
+  if (timestamp < 0 || sequence < 0 || !Number.isInteger(sequence)) return null;
+  for (const key of ["rms", "peak", "level", "vadProbability"] as const) {
+    if (event[key] !== undefined && (typeof event[key] !== "number" || event[key] < 0 || event[key] > 1)) return null;
+  }
+  for (const key of ["speech", "active"] as const) {
+    if (event[key] !== undefined && typeof event[key] !== "boolean") return null;
+  }
+  if (event.bands !== undefined && (!Array.isArray(event.bands) || event.bands.some(
+    (band) => typeof band !== "number" || !Number.isFinite(band) || band < 0 || band > 1,
+  ))) return null;
+  return value as AudioVisualizationData;
 }
 
 function appendDecoderArgs(args: string[], options: SpawnWhisperOptions): void {

@@ -10,9 +10,11 @@
 #include <cmath>
 #include <cstdio>
 #include <cstring>
+#include <fcntl.h>
 #include <limits>
 #include <string>
 #include <thread>
+#include <unistd.h>
 #include <vector>
 
 namespace {
@@ -45,6 +47,9 @@ struct params {
     bool translate = false;
     bool tinydiarize = false;
     bool use_gpu = true;
+    bool visualization = false;
+    int visualization_interval_ms = 33;
+    int visualization_bands = 0;
     std::string language = "en";
     std::string model;
     std::string prompt;
@@ -60,7 +65,8 @@ struct params {
         "  --min-speech-ms N --silence-hangover-ms N --max-decode-silence-ms N\n"
         "  --language LANG --max-tokens N --audio-ctx N --diagnostics\n"
         "  --prompt TEXT --carry-initial-prompt --keep-context --no-fallback\n"
-        "  --translate --print-special --no-gpu\n", program);
+        "  --translate --print-special --no-gpu\n"
+        "  --visualization [--visualization-interval N] [--visualization-bands N]\n", program);
     std::exit(error ? 1 : 0);
 }
 
@@ -102,6 +108,9 @@ params parse(int argc, char ** argv) {
         else if (arg == "--tinydiarize") result.tinydiarize = true;
         else if (arg == "--save-audio") { /* capture remains in-memory in this driver */ }
         else if (arg == "-ng" || arg == "--no-gpu") result.use_gpu = false;
+        else if (arg == "--visualization") result.visualization = true;
+        else if (arg == "--visualization-interval") result.visualization_interval_ms = std::stoi(value(index, argc, argv, "--visualization-interval requires a value"));
+        else if (arg == "--visualization-bands") result.visualization_bands = std::stoi(value(index, argc, argv, "--visualization-bands requires a value"));
         else usage(argv[0], ("unknown argument: " + arg).c_str());
     }
     if (result.model.empty()) usage(argv[0], "--model is required");
@@ -110,7 +119,96 @@ params parse(int argc, char ** argv) {
     if (result.min_speech_ms <= 0 || result.silence_hangover_ms <= 0 || result.max_decode_silence_ms < 0) {
         usage(argv[0], "speech and silence durations must be non-negative, with positive speech and hangover durations");
     }
+    if (result.visualization_interval_ms < 33 || result.visualization_interval_ms > 1000) {
+        usage(argv[0], "--visualization-interval must be between 33 and 1000 ms");
+    }
+    if (result.visualization_bands < 0 || result.visualization_bands > 32) {
+        usage(argv[0], "--visualization-bands must be between 0 and 32");
+    }
     return result;
+}
+
+struct audio_meter {
+    float rms = 0.0f;
+    float peak = 0.0f;
+    float level = 0.0f;
+    std::vector<float> bands;
+};
+
+audio_meter measure_audio(const std::vector<float> & samples, int band_count, float previous_level) {
+    audio_meter meter;
+    if (samples.empty()) {
+        // The device may deliver 64 ms callbacks even though we publish at
+        // 33 ms. Hold the last frame between callbacks instead of flickering.
+        meter.level = previous_level;
+        return meter;
+    }
+
+    double squares = 0.0;
+    for (const float sample : samples) {
+        const float amplitude = std::min(1.0f, std::abs(sample));
+        squares += static_cast<double>(amplitude) * amplitude;
+        meter.peak = std::max(meter.peak, amplitude);
+    }
+    meter.rms = std::min(1.0f, static_cast<float>(std::sqrt(squares / samples.size())));
+    // Microphone PCM normally occupies a small fraction of full scale. A
+    // bounded perceptual gain makes the normalized UI value useful while the
+    // raw RMS and peak fields remain normalized sample measurements.
+    // Map roughly -60 dBFS..-12 dBFS onto the UI range. This keeps ordinary
+    // speech responsive across common microphone gain settings without calling
+    // the result calibrated dB. Very low noise stays visually quiet.
+    const float dbfs = 20.0f * std::log10(std::max(meter.rms, 0.000001f));
+    const float target = meter.rms < 0.001f
+        ? 0.0f
+        : std::clamp((dbfs + 60.0f) / 48.0f, 0.0f, 1.0f);
+    const float smoothing = target > previous_level ? 0.78f : 0.28f;
+    meter.level = previous_level + smoothing * (target - previous_level);
+
+    if (band_count > 0) {
+        meter.bands.reserve(static_cast<size_t>(band_count));
+        for (int band = 0; band < band_count; ++band) {
+            const size_t begin = samples.size() * static_cast<size_t>(band) / band_count;
+            const size_t end = samples.size() * static_cast<size_t>(band + 1) / band_count;
+            double band_squares = 0.0;
+            for (size_t index = begin; index < end; ++index) {
+                band_squares += static_cast<double>(samples[index]) * samples[index];
+            }
+            const size_t count = std::max<size_t>(1, end - begin);
+            meter.bands.push_back(std::min(1.0f, static_cast<float>(std::sqrt(band_squares / count))));
+        }
+    }
+    return meter;
+}
+
+void write_audio_event(
+    long long timestamp_ms,
+    unsigned long long sequence,
+    const audio_meter & meter,
+    float vad_probability,
+    bool speech,
+    bool active
+) {
+    std::string record = "{\"timestamp\":" + std::to_string(timestamp_ms)
+        + ",\"sequence\":" + std::to_string(sequence)
+        + ",\"rms\":" + std::to_string(meter.rms)
+        + ",\"peak\":" + std::to_string(meter.peak)
+        + ",\"level\":" + std::to_string(meter.level)
+        + ",\"vadProbability\":" + std::to_string(vad_probability)
+        + ",\"speech\":" + (speech ? "true" : "false")
+        + ",\"active\":" + (active ? "true" : "false");
+    if (!meter.bands.empty()) {
+        record += ",\"bands\":[";
+        for (size_t index = 0; index < meter.bands.size(); ++index) {
+            if (index > 0) record += ',';
+            record += std::to_string(meter.bands[index]);
+        }
+        record += ']';
+    }
+    record += "}\n";
+    // fd 3 is a dedicated best-effort structured event channel configured by
+    // vocal-lib. It is non-blocking, so a slow consumer drops meter samples and
+    // can never delay capture, VAD, or decoding.
+    (void) ::write(3, record.data(), record.size());
 }
 
 bool wait_for_audio(
@@ -235,8 +333,22 @@ void print_utterance_final(const std::string & text) {
 
 int main(int argc, char ** argv) {
     const auto options = parse(argc, argv);
-    ggml_backend_load_all();
+    if (options.visualization) {
+        const int flags = ::fcntl(3, F_GETFL, 0);
+        if (flags >= 0) (void) ::fcntl(3, F_SETFL, flags | O_NONBLOCK);
+    }
 
+    // The capture ring is a backlog, not the decoder window. Keeping these
+    // separate prevents audio recorded during model initialization or a slow
+    // decode from disappearing. Start it before loading Whisper: consumers can
+    // begin speaking as soon as they request a session, and large Vulkan models
+    // can otherwise take long enough to drop the opening words completely.
+    audio_capture audio(std::max(capture_backlog_ms, options.length_ms));
+    if (!audio.init(options.capture_id, sample_rate) || !audio.resume()) {
+        return 3;
+    }
+
+    ggml_backend_load_all();
     whisper_context_params context_params = whisper_context_default_params();
     context_params.use_gpu = options.use_gpu;
     whisper_context * context = whisper_init_from_file_with_params(options.model.c_str(), context_params);
@@ -253,16 +365,12 @@ int main(int argc, char ** argv) {
         return 2;
     }
 
-    // The capture ring is a backlog, not the decoder window. Keeping these
-    // separate prevents audio recorded during a slow decode from disappearing.
-    audio_capture audio(std::max(capture_backlog_ms, options.length_ms));
-    if (!audio.init(options.capture_id, sample_rate) || !audio.resume()) {
-        whisper_vad_free(vad);
-        whisper_free(context);
-        return 3;
-    }
-
     bool initial_prompt_pending = true;
+    const auto session_started = std::chrono::steady_clock::now();
+    std::atomic<float> visualization_vad_probability{0.0f};
+    std::atomic_bool visualization_speech{false};
+    std::atomic_bool visualization_active{false};
+    std::atomic_bool visualization_running{options.visualization};
     std::vector<float> chunk;
     std::vector<float> capture_pending;
     std::vector<float> vad_pending;
@@ -276,6 +384,31 @@ int main(int argc, char ** argv) {
         (vad_window_samples * 1000) / sample_rate,
         options.min_speech_ms,
         options.silence_hangover_ms);
+
+    std::thread visualization_thread;
+    if (options.visualization) {
+        visualization_thread = std::thread([&]() {
+            std::vector<float> meter_samples;
+            float level = 0.0f;
+            unsigned long long sequence = 0;
+            auto next_frame = std::chrono::steady_clock::now();
+            while (visualization_running.load(std::memory_order_relaxed)) {
+                next_frame += std::chrono::milliseconds(options.visualization_interval_ms);
+                audio.drain_meter(meter_samples);
+                const auto meter = measure_audio(meter_samples, options.visualization_bands, level);
+                level = meter.level;
+                const auto now = std::chrono::steady_clock::now();
+                write_audio_event(
+                    std::chrono::duration_cast<std::chrono::milliseconds>(now - session_started).count(),
+                    sequence++,
+                    meter,
+                    visualization_vad_probability.load(std::memory_order_relaxed),
+                    visualization_speech.load(std::memory_order_relaxed),
+                    visualization_active.load(std::memory_order_relaxed));
+                std::this_thread::sleep_until(next_frame);
+            }
+        });
+    }
 
     const auto decode_audio = [&](const std::vector<float> & samples, bool final_decode) {
         whisper_full_params decode = whisper_full_default_params(
@@ -434,6 +567,10 @@ int main(int argc, char ** argv) {
             }
         }
 
+        visualization_vad_probability.store(latest_vad_probability, std::memory_order_relaxed);
+        visualization_speech.store(current_frame_has_speech, std::memory_order_relaxed);
+        visualization_active.store(speech_gate.active(), std::memory_order_relaxed);
+
         if (vad_failed) {
             whisper_vad_reset_state(vad);
             speech_gate.reset_utterance();
@@ -516,6 +653,8 @@ int main(int argc, char ** argv) {
     } else {
         std::printf("\n");
     }
+    visualization_running.store(false, std::memory_order_relaxed);
+    if (visualization_thread.joinable()) visualization_thread.join();
     whisper_vad_free(vad);
     whisper_free(context);
     return 0;

@@ -30,8 +30,10 @@ export class EnvelopeConnection extends EventEmitter {
     return super.on(eventName, listener);
   }
 
-  send(envelope: IpcEnvelope): void {
-    this.output.write(encodeEnvelope(envelope));
+  send(envelope: IpcEnvelope, droppable = false): boolean {
+    const output = this.output as NodeJS.WritableStream & { writableLength?: number; writableNeedDrain?: boolean };
+    if (droppable && (output.writableNeedDrain || (output.writableLength ?? 0) > 64 * 1024)) return false;
+    return output.write(encodeEnvelope(envelope));
   }
 
   close(): void {
